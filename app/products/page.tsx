@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Breadcrumb from "@/components/breadcrumb" // Renamed import
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import PageHeroTitle from "@/components/page-hero-title"; // New import
 
 const allProducts = [
   {
@@ -56,26 +56,34 @@ const allProducts = [
     category: "Fluid Dynamics",
     link: "/products/industrial-pumps",
   },
-]
+];
 
 export default function ProductsPage() {
   return (
     <>
-      <Breadcrumb />
-      <section className="py-12 md:py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Products</h1>
-          <p className="text-lg text-gray-700">Explore the full range of products offered by Jaydeep Industries.</p>
+      <PageHeroTitle
+        title="Our Products"
+        description="Explore the full range of products offered by Jaydeep Industries."
+        themeColor="red"
+      />
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+        {/* Decorative Shadow Element (Red themed) - Increased size and blur */}
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-red-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-extrabold text-[#da222a] mb-4">Our Comprehensive Product Range</h2>
+            <h2 className="text-4xl font-extrabold text-[#da222a] mb-4">
+              Our Comprehensive Product Range
+            </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Explore our diverse portfolio of industrial products, engineered to meet the highest standards of quality
-              and performance across various sectors.
+              Explore our diverse portfolio of industrial products, engineered
+              to meet the highest standards of quality and performance across
+              various sectors.
             </p>
           </motion.div>
 
@@ -85,7 +93,11 @@ export default function ProductsPage() {
                 key={product.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: index * 0.1,
+                }}
                 className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300"
               >
                 <div className="relative h-60 w-full">
@@ -101,9 +113,16 @@ export default function ProductsPage() {
                   <span className="inline-block bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">
                     {product.category}
                   </span>
-                  <h3 className="text-2xl font-bold text-[#1a1a1a] mb-3">{product.name}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{product.description}</p>
-                  <Button asChild className="bg-[#da222a] hover:bg-[#da222a]/90 text-white font-semibold rounded-lg">
+                  <h3 className="text-2xl font-bold text-[#1a1a1a] mb-3">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {product.description}
+                  </p>
+                  <Button
+                    asChild
+                    className="bg-[#da222a] hover:bg-[#da222a]/90 text-white font-semibold rounded-lg"
+                  >
                     <Link href={product.link}>
                       View Details
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -116,5 +135,5 @@ export default function ProductsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,12 +7,12 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
-  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
   { name: "Group", href: "/group" },
   { name: "Our Products", href: "/products" },
   { name: "Feedback & Inquiry", href: "/feedback" },
   { name: "We Buy", href: "/we-buy" },
-  { name: "Contact", href: "/contact" },
+  { name: "Reseller Program", href: "/reseller-program" }, // Updated href for new page
 ];
 
 export default function MainHeader() {
@@ -119,7 +118,7 @@ export default function MainHeader() {
                   size="sm"
                   className="bg-white text-[#0066a4] hover:bg-gray-100 font-bold px-8 lg:px-10 text-sm lg:text-base shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border border-[#0066a4]"
                 >
-                  <Link href="/feedback">Request a Quote</Link>
+                  <Link href="/contact">Contact</Link>
                 </Button>
               </motion.div>
             </motion.div>

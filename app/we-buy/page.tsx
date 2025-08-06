@@ -1,36 +1,38 @@
-"use client"
+"use client";
 
-import Breadcrumb from "@/components/breadcrumb" // Renamed import
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { Mail, Phone } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
+import PageHeroTitle from "@/components/page-hero-title"; // New import
 
 export default function WeBuyPage() {
   return (
     <>
-      <Breadcrumb />
-      <section className="py-12 md:py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">We Buy</h1>
-          <p className="text-lg text-gray-700">
-            Information about materials or products Jaydeep Industries is interested in purchasing.
-          </p>
-        </div>
-      </section>
-      <section className="py-16 md:py-24 bg-[#0066a4]/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <PageHeroTitle
+        title="We Buy"
+        description="Information about materials or products Jaydeep Industries is interested in purchasing."
+        themeColor="blue"
+      />
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+        {/* Decorative Shadow Element (Blue themed) - Increased size and blur */}
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-blue-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">Scrap & Industrial Waste</h2>
+            <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">
+              Scrap & Industrial Waste
+            </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-              Jaydeep Industries is actively involved in sustainable practices, including the procurement of various
-              types of industrial scrap and waste materials for recycling and responsible disposal.
+              Jaydeep Industries is actively involved in sustainable practices,
+              including the procurement of various types of industrial scrap and
+              waste materials for recycling and responsible disposal.
             </p>
           </motion.div>
 
@@ -41,19 +43,28 @@ export default function WeBuyPage() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 text-left"
             >
-              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Materials We Are Interested In:</h3>
+              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">
+                Materials We Are Interested In:
+              </h3>
               <ul className="list-disc list-inside text-gray-700 space-y-3">
-                <li>Ferrous and Non-Ferrous Metals (Iron, Steel, Copper, Aluminum, Brass)</li>
+                <li>
+                  Ferrous and Non-Ferrous Metals (Iron, Steel, Copper, Aluminum,
+                  Brass)
+                </li>
                 <li>Industrial Plastics (HDPE, LDPE, PP, PVC)</li>
                 <li>Electronic Waste (E-waste)</li>
                 <li>Rubber and Tires</li>
                 <li>Paper and Cardboard Waste</li>
                 <li>Used Machinery and Equipment</li>
-                <li>Chemical Waste (with proper documentation and safety protocols)</li>
+                <li>
+                  Chemical Waste (with proper documentation and safety
+                  protocols)
+                </li>
               </ul>
               <p className="mt-6 text-gray-700">
-                If you have materials not listed here, please contact us to discuss. We are always looking for new
-                opportunities to expand our recycling efforts.
+                If you have materials not listed here, please contact us to
+                discuss. We are always looking for new opportunities to expand
+                our recycling efforts.
               </p>
             </motion.div>
 
@@ -63,10 +74,15 @@ export default function WeBuyPage() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 text-left"
             >
-              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Inquire About Selling Your Materials:</h3>
+              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">
+                Inquire About Selling Your Materials:
+              </h3>
               <form className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Your Name
                   </label>
                   <Input
@@ -77,7 +93,10 @@ export default function WeBuyPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Your Email
                   </label>
                   <Input
@@ -88,7 +107,10 @@ export default function WeBuyPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="material" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="material"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Type of Material
                   </label>
                   <Input
@@ -99,7 +121,10 @@ export default function WeBuyPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="quantity"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Quantity (approx.)
                   </label>
                   <Input
@@ -110,7 +135,10 @@ export default function WeBuyPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Additional Details
                   </label>
                   <Textarea
@@ -161,5 +189,5 @@ export default function WeBuyPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

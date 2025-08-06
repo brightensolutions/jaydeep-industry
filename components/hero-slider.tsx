@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useCallback } from "react"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
@@ -32,23 +32,23 @@ const slides = [
     ctaText: "Contact Us",
     ctaLink: "/contact",
   },
-]
+];
 
 export default function HeroSlider() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }, [slides.length])
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, [slides.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }, [slides.length])
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  }, [slides.length]);
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000) // Auto-advance every 5 seconds
-    return () => clearInterval(interval)
-  }, [nextSlide])
+    const interval = setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
+    return () => clearInterval(interval);
+  }, [nextSlide]);
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -63,7 +63,7 @@ export default function HeroSlider() {
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
     }),
-  }
+  };
 
   return (
     <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
@@ -116,9 +116,12 @@ export default function HeroSlider() {
                 <Button
                   asChild
                   size="lg"
+                  variant="ghost" // Added variant="ghost"
                   className="bg-[#da222a] hover:bg-[#da222a]/90 text-white font-bold text-lg px-8 py-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
-                  <Link href={slides[currentSlide].ctaLink}>{slides[currentSlide].ctaText}</Link>
+                  <Link href={slides[currentSlide].ctaLink}>
+                    {slides[currentSlide].ctaText}
+                  </Link>
                 </Button>
               </motion.div>
             </div>
@@ -161,5 +164,5 @@ export default function HeroSlider() {
         ))}
       </div>
     </section>
-  )
+  );
 }

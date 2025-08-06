@@ -1,34 +1,34 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowUp } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
-      setIsVisible(true)
+      setIsVisible(true);
     } else {
-      setIsVisible(false)
+      setIsVisible(false);
     }
-  }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    })
-  }
+    });
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility)
+    window.addEventListener("scroll", toggleVisibility);
     return () => {
-      window.removeEventListener("scroll", toggleVisibility)
-    }
-  }, [])
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
 
   return (
     <AnimatePresence>
@@ -43,6 +43,7 @@ export default function ScrollToTop() {
           <Button
             onClick={scrollToTop}
             size="icon"
+            variant="ghost" // Changed variant to ghost
             className="rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 text-white"
             aria-label="Scroll to top"
           >
@@ -51,5 +52,5 @@ export default function ScrollToTop() {
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
 }

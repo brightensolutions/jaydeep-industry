@@ -1,33 +1,37 @@
-"use client"
+"use client";
 
-import Breadcrumb from "@/components/breadcrumb" // Renamed import
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { motion } from "framer-motion"
-import { MessageSquare, Star, Lightbulb } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
+import { MessageSquare, Star, Lightbulb } from "lucide-react";
+import PageHeroTitle from "@/components/page-hero-title"; // New import
 
 export default function FeedbackPage() {
   return (
     <>
-      <Breadcrumb />
-      <section className="py-12 md:py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Feedback & Inquiry</h1>
-          <p className="text-lg text-gray-700">Provide your feedback or send us an inquiry.</p>
-        </div>
-      </section>
-      <section className="py-16 md:py-24 bg-[#0066a4]/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <PageHeroTitle
+        title="Feedback & Inquiry"
+        description="Provide your feedback or send us an inquiry."
+        themeColor="blue"
+      />
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+        {/* Decorative Shadow Element (Blue themed) - Increased size and blur */}
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-blue-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">Your Feedback Matters to Us</h2>
+            <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">
+              Your Feedback Matters to Us
+            </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-              At Jaydeep Industries, we are constantly striving to improve. Your feedback helps us enhance our products,
-              services, and overall customer experience.
+              At Jaydeep Industries, we are constantly striving to improve. Your
+              feedback helps us enhance our products, services, and overall
+              customer experience.
             </p>
           </motion.div>
 
@@ -39,10 +43,15 @@ export default function FeedbackPage() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 text-left"
             >
-              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">Share Your Thoughts</h3>
+              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-6">
+                Share Your Thoughts
+              </h3>
               <form className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Your Name
                   </label>
                   <Input
@@ -53,7 +62,10 @@ export default function FeedbackPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Your Email
                   </label>
                   <Input
@@ -64,7 +76,10 @@ export default function FeedbackPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="type"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Type of Feedback
                   </label>
                   <select
@@ -79,7 +94,10 @@ export default function FeedbackPage() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Your Message
                   </label>
                   <Textarea
@@ -105,32 +123,43 @@ export default function FeedbackPage() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 space-y-8"
             >
-              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-4">Why Your Feedback is Important</h3>
+              <h3 className="text-2xl font-bold text-[#1a1a1a] mb-4">
+                Why Your Feedback is Important
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <MessageSquare className="h-8 w-8 text-[#da222a] flex-shrink-0" />
                   <div>
-                    <h4 className="text-xl font-semibold text-[#1a1a1a]">Continuous Improvement</h4>
+                    <h4 className="text-xl font-semibold text-[#1a1a1a]">
+                      Continuous Improvement
+                    </h4>
                     <p className="text-gray-700">
-                      Your insights directly contribute to the ongoing refinement of our offerings.
+                      Your insights directly contribute to the ongoing
+                      refinement of our offerings.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Star className="h-8 w-8 text-[#da222a] flex-shrink-0" />
                   <div>
-                    <h4 className="text-xl font-semibold text-[#1a1a1a]">Customer Satisfaction</h4>
+                    <h4 className="text-xl font-semibold text-[#1a1a1a]">
+                      Customer Satisfaction
+                    </h4>
                     <p className="text-gray-700">
-                      We use your comments to ensure our services meet and exceed your expectations.
+                      We use your comments to ensure our services meet and
+                      exceed your expectations.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Lightbulb className="h-8 w-8 text-[#da222a] flex-shrink-0" />
                   <div>
-                    <h4 className="text-xl font-semibold text-[#1a1a1a]">Innovation & Growth</h4>
+                    <h4 className="text-xl font-semibold text-[#1a1a1a]">
+                      Innovation & Growth
+                    </h4>
                     <p className="text-gray-700">
-                      New ideas and suggestions help us innovate and expand our capabilities.
+                      New ideas and suggestions help us innovate and expand our
+                      capabilities.
                     </p>
                   </div>
                 </div>
@@ -140,5 +169,5 @@ export default function FeedbackPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

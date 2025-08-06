@@ -15,8 +15,8 @@ export default function WhatsAppButton() {
     >
       <Button
         asChild
-        // Removed size="icon" to ensure custom w/h and rounded-full apply correctly
-        className="rounded-full shadow-lg bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 flex items-center justify-center" // Added flex for centering icon
+        variant="ghost" // Changed variant to ghost
+        className="rounded-full shadow-lg bg-[#25D366] hover:bg-[#1DA851] text-white w-14 h-14 flex items-center justify-center" // Removed !important
         aria-label="Chat on WhatsApp"
       >
         <Link
