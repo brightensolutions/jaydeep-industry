@@ -1,9 +1,17 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
-import { motion } from "framer-motion"
+import Link from "next/link";
+import Image from "next/image";
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
@@ -27,13 +35,17 @@ export default function Footer() {
                 className="h-14 w-14 object-contain"
               />
               <div>
-                <h3 className="text-2xl font-bold text-white">JAYDEEP INDUSTRIES</h3>
-                <p className="text-sm text-gray-400">Weaving Excellence Since 1976</p>
+                <h3 className="text-2xl font-bold text-white">
+                  JAYDEEP INDUSTRIES
+                </h3>
+                <p className="text-sm text-gray-400">
+                  Weaving Excellence Since 1976
+                </p>
               </div>
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              Leading manufacturer of precision weaving accessories, committed to quality and innovation for the global
-              textile industry.
+              Leading manufacturer of precision weaving accessories, committed
+              to quality and innovation for the global textile industry.
             </p>
             <div className="flex space-x-4">
               <motion.a
@@ -73,30 +85,47 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="col-span-1 space-y-4">
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/group" className="text-gray-400 hover:text-[#da222a] transition-colors">
+                <Link
+                  href="/group"
+                  className="text-gray-400 hover:text-[#da222a] transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-400 hover:text-[#da222a] transition-colors">
+                <Link
+                  href="/products"
+                  className="text-gray-400 hover:text-[#da222a] transition-colors"
+                >
                   Our Products
                 </Link>
               </li>
               <li>
-                <Link href="/feedback" className="text-gray-400 hover:text-[#da222a] transition-colors">
+                <Link
+                  href="/feedback"
+                  className="text-gray-400 hover:text-[#da222a] transition-colors"
+                >
                   Feedback & Inquiry
                 </Link>
               </li>
               <li>
-                <Link href="/we-buy" className="text-gray-400 hover:text-[#da222a] transition-colors">
+                <Link
+                  href="/we-buy"
+                  className="text-gray-400 hover:text-[#da222a] transition-colors"
+                >
                   We Buy
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-[#da222a] transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-gray-400 hover:text-[#da222a] transition-colors"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -105,11 +134,13 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="col-span-1 space-y-4">
-            <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Contact Info
+            </h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-[#da222a] flex-shrink-0" />
-                <span className="text-gray-400">+91 XXX XXX XXXX</span>
+                <span className="text-gray-400">+91 9825311311</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-[#0066a4] flex-shrink-0" />
@@ -118,7 +149,8 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#da222a] flex-shrink-0" />
                 <address className="not-italic text-gray-400">
-                  123 Industrial Area, City, State, Country - 123456
+                  D2/92-95, Bhagwati Nagar Industrial Estate, Near Navjivan
+                  Automotive Showroom, Bhestan, Surat - 395023 (Gujarat) India
                 </address>
               </li>
             </ul>
@@ -126,8 +158,12 @@ export default function Footer() {
 
           {/* Newsletter (Optional) */}
           <div className="col-span-1 space-y-4">
-            <h4 className="text-lg font-semibold text-white mb-4">Newsletter</h4>
-            <p className="text-gray-400">Stay updated with our latest products and news.</p>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Newsletter
+            </h4>
+            <p className="text-gray-400">
+              Stay updated with our latest products and news.
+            </p>
             <form className="flex flex-col space-y-3">
               <input
                 type="email"
@@ -145,9 +181,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} Jaydeep Industries. All rights reserved.
+          &copy; {new Date().getFullYear()} Jaydeep Industries. All rights
+          reserved.
         </div>
       </div>
     </motion.footer>
-  )
+  );
 }

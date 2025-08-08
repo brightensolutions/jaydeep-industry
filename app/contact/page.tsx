@@ -139,15 +139,16 @@ export default function ContactPage() {
                         href="tel:+91XXXXXXXXXX"
                         className="text-[#0066a4] hover:underline"
                       >
-                        +91 XXX XXX XXXX
+                        +91 9825311311
                       </a>
                     </span>
                   </li>
                   <li className="flex items-start space-x-4">
                     <MapPin className="h-6 w-6 text-[#da222a] flex-shrink-0 mt-1" />
                     <span>
-                      Address: 123 Industrial Area, City Name, State, Country -
-                      123456
+                      Address: D2/92-95, Bhagwati Nagar Industrial Estate, Near
+                      Navjivan Automotive Showroom, Bhestan, Surat - 395023
+                      (Gujarat) India
                     </span>
                   </li>
                 </ul>
