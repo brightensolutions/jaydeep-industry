@@ -1,122 +1,84 @@
-"use client";
-
-import React from "react";
+import * as React from "react";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 
-interface TimelineProps {
-  children: React.ReactNode;
-  className?: string;
-  direction?: "horizontal" | "vertical";
+interface TimelineProps extends React.HTMLAttributes<HTMLOListElement> {
+  direction?: "vertical" | "horizontal";
 }
 
-export const Timeline = ({
-  children,
-  className,
-  direction = "horizontal",
-}: TimelineProps) => {
-  return (
-    <div
+const Timeline = React.forwardRef<HTMLOListElement, TimelineProps>(
+  ({ className, direction = "vertical", ...props }, ref) => (
+    <ol
+      ref={ref}
       className={cn(
-        "relative flex justify-center items-center",
-        "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8", // Timeline manages its own container width and padding
-        direction === "horizontal" ? "flex-row py-10" : "flex-col",
+        "relative",
+        // The main vertical line for the timeline
+        direction === "vertical" &&
+          "border-l border-gray-200 dark:border-gray-700",
+        // Horizontal layout (not used in this specific request, but kept for completeness)
+        direction === "horizontal" &&
+          "flex justify-center items-start space-x-8",
         className
       )}
-    >
-      {/* Horizontal Line for horizontal timeline */}
-      {direction === "horizontal" && (
-        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 hidden sm:block"></div>
-      )}
-      <div
-        className={cn(
-          "flex flex-nowrap justify-between", // Prevent wrapping, distribute space evenly
-          direction === "horizontal" ? "" : "flex-col space-y-16",
-          "items-stretch" // Ensure all direct children stretch to the tallest item's height
-        )}
-      >
-        {children}
-      </div>
-    </div>
-  );
-};
+      {...props}
+    />
+  )
+);
+Timeline.displayName = "Timeline";
 
-interface TimelineItemProps {
-  children: React.ReactNode;
-  className?: string;
-  index: number;
-  direction?: "horizontal" | "vertical";
+interface TimelineItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  index: number; // To alternate colors
   year: string;
 }
 
-export const TimelineItem = ({
-  children,
-  className,
-  index,
-  direction = "horizontal",
-  year,
-}: TimelineItemProps) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>(
+  ({ className, index, year, children, ...props }, ref) => {
+    // Alternate colors for the dot and the year/title text
+    const dotColor = index % 2 === 0 ? "bg-primary-blue" : "bg-primary-red";
+    const textColor =
+      index % 2 === 0 ? "text-primary-blue" : "text-primary-red";
 
-  const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={variants}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={cn(
-        "relative flex-shrink-0",
-        // Force each item to take 1/4 width for horizontal, full width for vertical
-        // Added h-full to ensure the item itself stretches
-        direction === "horizontal"
-          ? "flex flex-col w-1/4 px-2 h-full"
-          : "flex flex-row items-start w-full",
-        className
-      )}
-    >
-      {/* Wrapper for dot and line to maintain centering while card stretches */}
-      <div className="flex flex-col items-center">
-        {/* Timeline Dot */}
-        <div className="w-7 h-7 bg-red-600 rounded-full flex items-center justify-center z-10 relative">
-          <span className="sr-only">{year}</span>
-          <div className="w-3 h-3 bg-white rounded-full"></div>
-        </div>
-
-        {/* Connecting Line to Card */}
-        {direction === "horizontal" ? (
-          <div className="absolute w-0.5 bg-red-600 z-0 top-7 h-16"></div>
-        ) : (
-          <div className="absolute h-0.5 bg-red-600 w-6 -left-6 top-1/2 transform -translate-y-1/2"></div>
-        )}
-      </div>
-
-      {/* Content Card (always below the dot for horizontal) */}
-      <Card
+    return (
+      <li
+        ref={ref}
         className={cn(
-          "w-full p-6 shadow-lg hover:shadow-xl transition-shadow duration-300",
-          // Added h-full and flex-grow to ensure the card fills the available height
-          direction === "horizontal"
-            ? "mt-8 h-full flex flex-col flex-grow"
-            : "ml-8"
+          "relative pb-10", // Add bottom padding for spacing between items
+          className
         )}
+        {...props}
       >
-        <CardContent className="p-0 flex-grow">
-          {" "}
-          {/* Added flex-grow here too */}
-          <h4 className="text-xl font-bold text-gray-900 mb-2">{year}</h4>
-          {children}
-        </CardContent>
-      </Card>
-    </motion.div>
-  );
-};
+        {/* The dot, positioned absolutely relative to the <li>.
+            -left-[14px] centers a 28px dot (h-7 w-7) on the 1px border-l of the parent <ol>.
+            z-10 ensures it's above the line.
+        */}
+        <span
+          className={cn(
+            "absolute -left-[14px] top-0 flex h-7 w-7 items-center justify-center rounded-full ring-8 ring-white dark:ring-gray-900 z-10",
+            dotColor
+          )}
+        >
+          {/* You can add an icon or number inside the dot if desired */}
+        </span>
+
+        {/* Content area, pushed right to clear the dot and line.
+            ml-8 provides enough space for the dot (28px) plus some padding.
+        */}
+        <div className="ml-8">
+          <h3
+            className={cn(
+              "flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white",
+              textColor // Apply text color to the year/title
+            )}
+          >
+            {year}
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
+            {children}
+          </p>
+        </div>
+      </li>
+    );
+  }
+);
+TimelineItem.displayName = "TimelineItem";
+
+export { Timeline, TimelineItem };

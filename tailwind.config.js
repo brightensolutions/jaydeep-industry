@@ -27,6 +27,8 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          red: "#da222a", // Custom primary red
+          blue: "#1975ad", // Custom primary blue
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -67,21 +69,27 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "move-dots": {
+          // Keyframe for dotted animation
+          "0%": { backgroundPosition: "0 0" },
+          "100%": { backgroundPosition: "40px 40px" }, // Move by the size of the dot pattern
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "move-dots": "move-dots 10s linear infinite", // Apply animation
       },
-      // Custom gradients for themed shadow effects with increased visibility
       backgroundImage: {
         "gradient-blue-shadow":
-          "linear-gradient(to top right, #0066a480, transparent)", // Blue with 50% opacity
+          "radial-gradient(circle, rgba(37,99,235,0.3) 0%, rgba(37,99,235,0) 70%)", // Blue with 30% opacity
         "gradient-red-shadow":
-          "linear-gradient(to top right, #da222a80, transparent)", // Red with 50% opacity
+          "radial-gradient(circle, rgba(218,34,42,0.3) 0%, rgba(218,34,42,0) 70%)", // Red with 30% opacity
+        "dotted-pattern":
+          "radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px)", // Dotted pattern
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 };
-
 module.exports = config;

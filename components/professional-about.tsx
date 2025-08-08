@@ -5,15 +5,12 @@ import { Award, Globe, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image"; // Import Image from next/image
-import { Timeline, TimelineItem } from "@/components/ui/timeline"; // Import the new Timeline components
+import Image from "next/image";
+import { Timeline, TimelineItem } from "@/components/ui/timeline";
 
 export default function ProfessionalAbout() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  // Removed the 'features' array as it was unused.
-  // const features = [ ... ];
 
   const timelineEvents = [
     {
@@ -43,31 +40,14 @@ export default function ProfessionalAbout() {
   ];
 
   return (
-    <section ref={ref} className="relative py-20 bg-white overflow-hidden">
-      {/* Decorative Shadow Element (Blue themed) - Main fixed shadow */}
+    <section ref={ref} className="relative overflow-hidden">
+      {/* Decorative Shadow Element (Blue themed) - Main fixed shadow (left) */}
       <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
+      {/* NEW: Decorative Shadow Element (Blue themed) - Near Vision and Mission (right) */}
+      <div className="absolute top-[1600px] right-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div>
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <Badge variant="outline" className="mb-4 text-red-600 border-red-600">
-            About Jaydeep Industries
-          </Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Excellence in Textile Manufacturing Since 1976
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We are a leading manufacturer of precision weaving accessories,
-            committed to delivering superior quality products that meet the
-            evolving needs of the global textile industry.
-          </p>
-        </motion.div>
         {/* Company Story */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 mt-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -81,13 +61,13 @@ export default function ProfessionalAbout() {
                 Established in 1976 as a specialized manufacturer, Jaydeep
                 Industries has evolved into a trusted leader in weaving
                 accessories. Our{" "}
-                <strong className="text-red-600">SWASTIK</strong> brand Wire
+                <strong className="text-primary-red">SWASTIK</strong> brand Wire
                 Heads have become synonymous with quality and reliability in the
                 Indian textile industry.
               </p>
               <p>
                 Through strategic partnerships with{" "}
-                <strong className="text-blue-600">
+                <strong className="text-primary-blue">
                   Shree Sainath Industries
                 </strong>{" "}
                 , we offer comprehensive solutions including SSI brand Metal
@@ -111,29 +91,32 @@ export default function ProfessionalAbout() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            {/* Replaced <img> with <Image /> */}
             <Image
               src="/placeholder.svg?height=400&width=600&text=Manufacturing+Facility"
               alt="Manufacturing Facility"
-              width={600} // Explicit width
-              height={400} // Explicit height
+              width={600}
+              height={400}
               className="w-full h-80 object-cover rounded-lg shadow-lg"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-xl">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600">47+</div>{" "}
+                <div className="text-3xl font-bold text-primary-red">47+</div>{" "}
                 <div className="text-sm text-gray-600">Years of Excellence</div>
               </div>
             </div>
           </motion.div>
         </div>
-        {/* Company Story - Horizontal Timeline Section */}
-        <div className="relative z-10 py-20">
+      </div>
+      {/* Company Story - Timeline Section (Full Width with Container Padding) */}
+      <div className="py-20">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {" "}
+          {/* This div ensures container padding */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center mb-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+            className="text-center mb-10"
           >
             <h3 className="text-3xl font-bold text-gray-900">Our Journey</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
@@ -141,7 +124,7 @@ export default function ProfessionalAbout() {
               leader in textile manufacturing.
             </p>
           </motion.div>
-          <Timeline direction="horizontal">
+          <Timeline direction="vertical">
             {timelineEvents.map((event, index) => (
               <TimelineItem key={index} index={index} year={event.year}>
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
@@ -154,18 +137,17 @@ export default function ProfessionalAbout() {
             ))}
           </Timeline>
         </div>
-        {/* NEW: Decorative Shadow Element (Blue themed) - Near Vision and Mission */}
-        {/* Removed opacity-50 to match the first shadow's visibility */}
-        <div className="absolute top-[1600px] right-0 w-[500px] h-[500px] bg-gradient-blue-shadow blur-2xl rounded-full z-0 transform translate-x-1/2"></div>
-        {/* Vision and Mission Sections */}
-        <div className="relative z-10 py-20">
+      </div>
+      {/* Vision and Mission Sections (No Background) */}
+      <div className="py-20">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <Card className="h-full p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <Card className="h-full p-8 shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border-t-4 border-primary-blue hover:border-primary-blue/50">
                 <CardContent className="p-0">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">
                     Our Vision
@@ -185,7 +167,7 @@ export default function ProfessionalAbout() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              <Card className="h-full p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <Card className="h-full p-8 shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border-t-4 border-primary-red hover:border-primary-red/50">
                 <CardContent className="p-0">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">
                     Our Mission
@@ -202,50 +184,54 @@ export default function ProfessionalAbout() {
             </motion.div>
           </div>
         </div>
-        {/* Certifications Section */}
+      </div>
+      {/* Certifications Section (Full Width Blue Background with Dotted Animation) */}
+      <div className="relative pt-20 bg-primary-blue overflow-hidden">
+        {/* Dotted Overlay with Animation */}
+        <div className="absolute inset-0 bg-dotted-pattern bg-[size:40px_40px] animate-move-dots z-10"></div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-20 bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
+          className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 p-8"
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Quality Certifications & Standards
             </h3>
-            <p className="text-gray-600">
+            <p className="text-lg text-gray-100">
               Our commitment to quality is validated by international
               certifications and industry standards.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <Award className="h-16 w-16 text-red-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-gray-900 mb-2">
-                ISO 9001:2015
-              </h4>
-              <p className="text-sm text-gray-600">
-                Quality Management System Certified
-              </p>
-            </div>
-            <div>
-              <Shield className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-gray-900 mb-2">
-                Quality Assured
-              </h4>
-              <p className="text-sm text-gray-600">
-                Rigorous quality control processes
-              </p>
-            </div>
-            <div>
-              <Globe className="h-16 w-16 text-red-600 mx-auto mb-4" />
-              <h4 className="font-semibold text-gray-900 mb-2">
-                Global Standards
-              </h4>
-              <p className="text-sm text-gray-600">
-                International quality benchmarks
-              </p>
-            </div>
+            <Card className="bg-white/10 border border-white/20 text-white p-6 shadow-lg flex flex-col items-center justify-center h-full">
+              <CardContent className="p-0 flex flex-col items-center justify-center">
+                <Award className="h-24 w-24 mx-auto mb-4 text-white" />
+                <h4 className="font-semibold text-xl mb-2">ISO 9001:2015</h4>
+                <p className="text-base text-gray-200">
+                  Quality Management System Certified
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 border border-white/20 text-white p-6 shadow-lg flex flex-col items-center justify-center h-full">
+              <CardContent className="p-0 flex flex-col items-center justify-center">
+                <Shield className="h-24 w-24 mx-auto mb-4 text-white" />
+                <h4 className="font-semibold text-xl mb-2">Quality Assured</h4>
+                <p className="text-base text-gray-200">
+                  Rigorous quality control processes
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-white/10 border border-white/20 text-white p-6 shadow-lg flex flex-col items-center justify-center h-full">
+              <CardContent className="p-0 flex flex-col items-center justify-center">
+                <Globe className="h-24 w-24 mx-auto mb-4 text-white" />
+                <h4 className="font-semibold text-xl mb-2">Global Standards</h4>
+                <p className="text-base text-gray-200">
+                  International quality benchmarks
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </motion.div>
       </div>
