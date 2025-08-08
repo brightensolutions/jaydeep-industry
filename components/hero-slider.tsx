@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -37,13 +36,15 @@ const slides = [
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Removed slides.length from dependencies as it's a constant
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }, [slides.length]);
+  }, []); // Dependency array is now empty
 
+  // Removed slides.length from dependencies as it's a constant
   const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  }, [slides.length]);
+  }, []); // Dependency array is now empty
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000); // Auto-advance every 5 seconds
@@ -128,7 +129,6 @@ export default function HeroSlider() {
           </div>
         </motion.div>
       </AnimatePresence>
-
       {/* Navigation Arrows */}
       <Button
         variant="ghost"
@@ -148,7 +148,6 @@ export default function HeroSlider() {
       >
         <ChevronRight className="h-6 w-6" />
       </Button>
-
       {/* Progress Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
         {slides.map((_, index) => (

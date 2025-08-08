@@ -1,55 +1,19 @@
 "use client";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Award, Globe, Cog, Users, Target, Shield } from "lucide-react";
+import { Award, Globe, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image"; // Import Image from next/image
 import { Timeline, TimelineItem } from "@/components/ui/timeline"; // Import the new Timeline components
 
 export default function ProfessionalAbout() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const features = [
-    {
-      icon: Award,
-      title: "Quality Excellence",
-      description:
-        "ISO 9001:2015 certified manufacturing processes ensuring superior quality standards.",
-    },
-    {
-      icon: Globe,
-      title: "Global Sourcing",
-      description:
-        "Premium raw materials sourced from Malaysia and Switzerland for optimal performance.",
-    },
-    {
-      icon: Cog,
-      title: "Advanced Technology",
-      description:
-        "Modern nickel plating techniques for enhanced durability and performance.",
-    },
-    {
-      icon: Users,
-      title: "Expert Team",
-      description:
-        "Experienced professionals with decades of textile industry expertise.",
-    },
-    {
-      icon: Target,
-      title: "Precision Manufacturing",
-      description:
-        "Accurate dimensions and precise tolerance meeting exact customer requirements.",
-    },
-    {
-      icon: Shield,
-      title: "Trusted Brand",
-      description:
-        "SWASTIK brand - a household name in Indian textile industries since 1976.",
-    },
-  ];
+  // Removed the 'features' array as it was unused.
+  // const features = [ ... ];
 
   const timelineEvents = [
     {
@@ -82,7 +46,6 @@ export default function ProfessionalAbout() {
     <section ref={ref} className="relative py-20 bg-white overflow-hidden">
       {/* Decorative Shadow Element (Blue themed) - Main fixed shadow */}
       <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
-
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -126,7 +89,7 @@ export default function ProfessionalAbout() {
                 Through strategic partnerships with{" "}
                 <strong className="text-blue-600">
                   Shree Sainath Industries
-                </strong>
+                </strong>{" "}
                 , we offer comprehensive solutions including SSI brand Metal
                 Reeds, ensuring our customers have access to complete weaving
                 accessory solutions.
@@ -148,9 +111,12 @@ export default function ProfessionalAbout() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            <img
+            {/* Replaced <img> with <Image /> */}
+            <Image
               src="/placeholder.svg?height=400&width=600&text=Manufacturing+Facility"
               alt="Manufacturing Facility"
+              width={600} // Explicit width
+              height={400} // Explicit height
               className="w-full h-80 object-cover rounded-lg shadow-lg"
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-xl">
@@ -161,7 +127,6 @@ export default function ProfessionalAbout() {
             </div>
           </motion.div>
         </div>
-
         {/* Company Story - Horizontal Timeline Section */}
         <div className="relative z-10 py-20">
           <motion.div
@@ -176,7 +141,6 @@ export default function ProfessionalAbout() {
               leader in textile manufacturing.
             </p>
           </motion.div>
-
           <Timeline direction="horizontal">
             {timelineEvents.map((event, index) => (
               <TimelineItem key={index} index={index} year={event.year}>
@@ -190,11 +154,9 @@ export default function ProfessionalAbout() {
             ))}
           </Timeline>
         </div>
-
         {/* NEW: Decorative Shadow Element (Blue themed) - Near Vision and Mission */}
         {/* Removed opacity-50 to match the first shadow's visibility */}
         <div className="absolute top-[1600px] right-0 w-[500px] h-[500px] bg-gradient-blue-shadow blur-2xl rounded-full z-0 transform translate-x-1/2"></div>
-
         {/* Vision and Mission Sections */}
         <div className="relative z-10 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -240,7 +202,6 @@ export default function ProfessionalAbout() {
             </motion.div>
           </div>
         </div>
-
         {/* Certifications Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
