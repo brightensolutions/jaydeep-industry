@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
   { name: "About", href: "/about" },
-  { name: "Group", href: "/group" },
+  // { name: "Group", href: "/group" },
   { name: "Our Products", href: "/products" },
   { name: "Feedback & Inquiry", href: "/feedback" },
   { name: "We Buy", href: "/we-buy" },
@@ -116,7 +116,7 @@ export default function MainHeader() {
                 <Button
                   asChild
                   size="sm"
-                  className="bg-white text-[#0066a4] hover:bg-gray-100 font-bold px-8 lg:px-10 text-sm lg:text-base shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border border-[#0066a4]"
+                  className="bg-white text-[#0066a4] hover:bg-[#da222a] hover:text-white font-bold px-8 lg:px-10 text-sm lg:text-base shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border border-[#0066a4]"
                 >
                   <Link href="/contact">Contact</Link>
                 </Button>
@@ -228,11 +228,12 @@ export default function MainHeader() {
                     <Button
                       asChild
                       size="lg"
-                      className="w-full bg-[#0066a4] hover:bg-[#0066a4] text-white font-bold text-base shadow-lg hover:shadow-xl rounded-2xl py-4"
+                      className="w-full !rounded-xl !shadow-lg !py-3 !transition-all !duration-300"
                     >
                       <Link
                         href="/contact"
                         onClick={() => setMobileMenuOpen(false)}
+                        className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-[#0066a4] text-white font-bold text-base px-8 py-3 shadow-lg hover:bg-[#da222a] hover:shadow-xl transition-all duration-300 text-center"
                       >
                         Contact Us
                       </Link>

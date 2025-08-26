@@ -109,7 +109,8 @@ export default function FeedbackPage() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-[#da222a] hover:bg-[#da222a]/90 text-white font-bold rounded-lg py-3"
+                  variant="default"
+                  className="w-full !bg-[#da222a] hover:!bg-[#da222a]/90 !text-white font-bold !rounded-lg py-3"
                 >
                   Submit Feedback
                 </Button>

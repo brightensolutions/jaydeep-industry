@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { PhoneCall, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { PhoneCall, Mail } from "lucide-react";
 
 export default function ContactCta() {
   return (
@@ -15,16 +15,18 @@ export default function ContactCta() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-extrabold mb-4">Ready to Partner with Jaydeep Industries?</h2>
+          <h2 className="text-4xl font-extrabold mb-4">
+            Ready to Partner with Jaydeep Industries?
+          </h2>
           <p className="text-lg max-w-3xl mx-auto mb-8 opacity-90">
-            Whether you have an inquiry, need a custom solution, or want to provide feedback, our team is here to assist
-            you. Reach out today!
+            Whether you have an inquiry, need a custom solution, or want to
+            provide feedback, our team is here to assist you. Reach out today!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               asChild
               size="lg"
-              className="bg-[#da222a] hover:bg-[#da222a]/90 text-white font-bold rounded-xl px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="!bg-[#da222a] hover:bg-[#da222a]/90 text-white font-bold rounded-xl px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Link href="/contact">
                 <Mail className="mr-2 h-5 w-5" />
@@ -35,7 +37,7 @@ export default function ContactCta() {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#0066a4] font-bold rounded-xl px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="!border-2 !border-white !text-white !bg-transparent !hover:bg-white !hover:text-[#0066a4] !font-bold !rounded-xl !px-8 !py-3 !shadow-lg !hover:shadow-xl !transition-all !duration-300"
             >
               <Link href="tel:+91XXXXXXXXXX">
                 <PhoneCall className="mr-2 h-5 w-5" />
@@ -46,5 +48,5 @@ export default function ContactCta() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

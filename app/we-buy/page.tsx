@@ -150,7 +150,7 @@ export default function WeBuyPage() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-[#da222a] hover:bg-[#da222a]/90 text-white font-bold rounded-lg py-3"
+                  className="w-full !bg-[#da222a] !hover:bg-[#da222a]/90 !text-white !rounded-lg py-3 font-bold"
                 >
                   Submit Inquiry
                 </Button>
@@ -167,20 +167,23 @@ export default function WeBuyPage() {
             <Button
               asChild
               size="lg"
-              className="bg-[#0066a4] hover:bg-[#0066a4]/90 text-white font-bold rounded-xl px-8 py-3 shadow-lg"
+              className="!bg-[#0066a4] !hover:bg-[#0066a4]/90 !text-white font-bold rounded-xl px-8 py-3 shadow-lg"
             >
               <Link href="/contact">
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Our Team
               </Link>
             </Button>
+
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="border-2 border-[#0066a4] text-[#0066a4] bg-transparent hover:bg-[#0066a4] hover:text-white font-bold rounded-xl px-8 py-3 shadow-lg"
+              className="!border-2 !border-[#0066a4] !text-[#0066a4] !bg-transparent !hover:bg-[#0066a4] !hover:text-white !font-bold !rounded-xl !px-8 !py-3 !shadow-xl !hover:shadow-2xl !transition-all !duration-300"
             >
-              <Link href="tel:+91XXXXXXXXXX">
+              <Link
+                href="tel:+91XXXXXXXXXX"
+                className="flex items-center justify-center"
+              >
                 <Phone className="mr-2 h-5 w-5" />
                 Call Us Directly
               </Link>

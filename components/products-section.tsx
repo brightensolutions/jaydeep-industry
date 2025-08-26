@@ -8,23 +8,24 @@ import { ArrowRight } from "lucide-react";
 
 const products = [
   {
-    name: "Industrial Bearings",
+    name: "Twin Wire Healds",
     description:
-      "High-precision bearings for heavy machinery and critical applications.",
-    image: "/placeholder.svg?height=400&width=600",
+      "Manufactured in multiple wire gauges (SWG 18–34) and lengths (100–1000 mm), these healds are precision-engineered for weaving efficiency. The nickel plating provides a lustrous finish, uniform deposit, and superior corrosion resistance.",
+    image: "/twin-wire-healds.jpg",
     link: "/products/bearings",
   },
   {
-    name: "Custom Metal Components",
-    description: "Tailored metal parts manufactured to exact specifications.",
-    image: "/placeholder.svg?height=400&width=600",
+    name: "Mail Eyes – Hardened and Tinned, for Twin Wire Healds",
+    description:
+      "Durable mail eyes specially hardened and tinned to withstand the stress of weaving. Available in round, oval, and oblong types, they ensure smooth passage of warp threads and long-lasting performance in twin wire healds.",
+    image: "/mail-eyes.jpg",
     link: "/products/metal-components",
   },
   {
-    name: "Advanced Filtration Systems",
+    name: "Metal Reeds",
     description:
-      "Efficient solutions for air and liquid purification in industrial settings.",
-    image: "/placeholder.svg?height=400&width=600",
+      "A complete range of metal reeds for modern looms, including Sulzer, Dornier, Rapier, Ruti, Water Jet, and Warping Reeds. Available in counts from 4 to 280, with precise dimensions, they ensure excellent fabric quality and long operational life.",
+    image: "/metal-reeds.jpg",
     link: "/products/filtration-systems",
   },
 ];
@@ -82,9 +83,10 @@ export default function ProductsSection() {
                 <p className="text-gray-600 mb-4">{product.description}</p>
                 <Button
                   asChild
-                  className="bg-[#da222a] hover:bg-[#da222a]/90 text-white font-semibold rounded-lg"
+                  variant="default"
+                  className="!bg-[#da222a] hover:!bg-[#da222a]/90 !text-white font-semibold rounded-lg"
                 >
-                  <Link href={product.link}>
+                  <Link href={product.link} className="flex items-center">
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -104,7 +106,7 @@ export default function ProductsSection() {
           <Button
             asChild
             size="lg"
-            className="bg-[#0066a4] hover:bg-[#0066a4]/90 text-white font-bold rounded-xl px-8 py-3 shadow-lg"
+            className="!bg-[#0066a4] !hover:bg-[#0066a4]/90 !text-white !font-bold !rounded-xl !px-8 !py-3 !shadow-lg"
           >
             <Link href="/products">Explore All Products</Link>
           </Button>

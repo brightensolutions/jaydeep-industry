@@ -92,7 +92,7 @@ export default function ProfessionalAbout() {
             className="relative"
           >
             <Image
-              src="/placeholder.svg?height=400&width=600&text=Manufacturing+Facility"
+              src="/jaydeep-building2.jpg"
               alt="Manufacturing Facility"
               width={600}
               height={400}

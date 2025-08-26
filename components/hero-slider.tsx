@@ -9,28 +9,29 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/placeholder.svg?height=1080&width=1920",
-    title: "Innovating for a Sustainable Future",
-    subtitle: "Leading the way in eco-friendly industrial solutions.",
-    ctaText: "Learn More",
-    ctaLink: "/about",
-  },
-  {
-    id: 2,
-    image: "/placeholder.svg?height=1080&width=1920",
-    title: "Precision Engineering, Unmatched Quality",
-    subtitle: "Delivering excellence in every product we create.",
-    ctaText: "View Products",
+    image: "/jaydeep-slider1.jpg", // replace with actual image path
+    title: "Precision Twin Healds for Superior Weaving",
+    subtitle:
+      "High-quality twin healds designed for efficiency and durability in modern looms.",
+    ctaText: "Explore Twin Healds",
     ctaLink: "/products",
   },
-  {
-    id: 3,
-    image: "/placeholder.svg?height=1080&width=1920",
-    title: "Global Reach, Local Expertise",
-    subtitle: "Connecting industries worldwide with reliable solutions.",
-    ctaText: "Contact Us",
-    ctaLink: "/contact",
-  },
+  // {
+  //   id: 2,
+  //   image: "/placeholder.svg?height=1080&width=1920",
+  //   title: "Precision Engineering, Unmatched Quality",
+  //   subtitle: "Delivering excellence in every product we create.",
+  //   ctaText: "View Products",
+  //   ctaLink: "/products",
+  // },
+  // {
+  //   id: 3,
+  //   image: "/placeholder.svg?height=1080&width=1920",
+  //   title: "Global Reach, Local Expertise",
+  //   subtitle: "Connecting industries worldwide with reliable solutions.",
+  //   ctaText: "Contact Us",
+  //   ctaLink: "/contact",
+  // },
 ];
 
 export default function HeroSlider() {
@@ -117,11 +118,10 @@ export default function HeroSlider() {
                 <Button
                   asChild
                   size="lg"
-                  variant="ghost" // Added variant="ghost"
-                  className="bg-[#da222a] hover:bg-[#da222a]/90 text-white font-bold text-lg px-8 py-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+                  className="!bg-[#0066a4] !hover:bg-[#0066a4]/90 !text-white !font-bold !text-lg !rounded-full !px-8 !py-3 !shadow-xl !hover:shadow-2xl transition-all duration-300"
                 >
-                  <Link href={slides[currentSlide].ctaLink}>
-                    {slides[currentSlide].ctaText}
+                  <Link href="/products" className="inline-block text-center">
+                    Explore All Products
                   </Link>
                 </Button>
               </motion.div>
