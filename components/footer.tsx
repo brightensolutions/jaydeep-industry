@@ -23,9 +23,10 @@ export default function Footer() {
       className="bg-[#1a1a1a] text-gray-300 py-12 md:py-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12">
+        {/* Changed grid to 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-2 space-y-6">
+          <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-3">
               <Image
                 src="/logo.png"
@@ -84,7 +85,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="col-span-1 space-y-4">
+          <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white mb-4">
               Quick Links
             </h4>
@@ -133,7 +134,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="col-span-1 space-y-4">
+          <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white mb-4">
               Contact Info
             </h4>
@@ -155,31 +156,9 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* Newsletter (Optional) */}
-          <div className="col-span-1 space-y-4">
-            <h4 className="text-lg font-semibold text-white mb-4">
-              Newsletter
-            </h4>
-            <p className="text-gray-400">
-              Stay updated with our latest products and news.
-            </p>
-            <form className="flex flex-col space-y-3">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0066a4]"
-              />
-              <button
-                type="submit"
-                className="bg-[#0066a4] hover:bg-[#0066a4]/90 text-white font-semibold py-3 rounded-md transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
           &copy; {new Date().getFullYear()} Jaydeep Industries. All rights
           reserved.
