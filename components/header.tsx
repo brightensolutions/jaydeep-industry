@@ -12,7 +12,7 @@ const navigation = [
   { name: "Our Products", href: "/products" },
   { name: "Feedback & Inquiry", href: "/feedback" },
   { name: "We Buy", href: "/we-buy" },
-  { name: "Reseller Program", href: "/reseller-program" }, // Updated href for new page
+  // { name: "Reseller Program", href: "/reseller-program" }, // Updated href for new page
 ];
 
 export default function MainHeader() {

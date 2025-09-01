@@ -13,29 +13,29 @@ const allProducts = [
     description:
       "Manufactured in multiple wire gauges (SWG 18–34) and lengths (100–1000 mm), these healds are precision-engineered for weaving efficiency. The nickel plating provides a lustrous finish, uniform deposit, and superior corrosion resistance.",
     image: "/twin-wire-healds.jpg",
-    link: "/products/bearings",
+    link: "/products/twin-wire-healds",
   },
-  {
-    name: "Mail Eyes – Hardened and Tinned, for Twin Wire Healds",
-    description:
-      "Durable mail eyes specially hardened and tinned to withstand the stress of weaving. Available in round, oval, and oblong types, they ensure smooth passage of warp threads and long-lasting performance in twin wire healds.",
-    image: "/mail-eyes.jpg",
-    link: "/products/metal-components",
-  },
+  // {
+  //   name: "Mail Eyes – Hardened and Tinned, for Twin Wire Healds",
+  //   description:
+  //     "Durable mail eyes specially hardened and tinned to withstand the stress of weaving. Available in round, oval, and oblong types, they ensure smooth passage of warp threads and long-lasting performance in twin wire healds.",
+  //   image: "/mail-eyes.jpg",
+  //   link: "/products/mail-eyes",
+  // },
   {
     name: "Metal Reeds",
     description:
       "A complete range of metal reeds for modern looms, including Sulzer, Dornier, Rapier, Ruti, Water Jet, and Warping Reeds. Available in counts from 4 to 280, with precise dimensions, they ensure excellent fabric quality and long operational life.",
     image: "/metal-reeds.jpg",
-    link: "/products/filtration-systems",
+    link: "/products/metal-reeds",
   },
-  {
-    name: "Inserted Wire Healds with Groz-Beckert Mail Eyes",
-    description:
-      "Designed with various loop types (Round, Open End, Crimp, Oblong, Arrow), these healds offer flexibility for different loom requirements. Fitted with O & H Series Groz-Beckert mail eyes, they provide accurate warp thread control and high weaving reliability.",
-    image: "/groz-beck.jpg",
-    link: "/products/filtration-systems",
-  },
+  // {
+  //   name: "Inserted Wire Healds with Groz-Beckert Mail Eyes",
+  //   description:
+  //     "Designed with various loop types (Round, Open End, Crimp, Oblong, Arrow), these healds offer flexibility for different loom requirements. Fitted with O & H Series Groz-Beckert mail eyes, they provide accurate warp thread control and high weaving reliability.",
+  //   image: "/groz-beck.jpg",
+  //   link: "/products/inserted-wire-healds",
+  // },
 ];
 
 export default function ProductsPage() {
