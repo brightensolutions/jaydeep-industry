@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Factory, Users, Globe, Lightbulb } from "lucide-react";
+import { Factory, Users, Globe } from "lucide-react";
 
 const features = [
   {
@@ -20,12 +20,6 @@ const features = [
     name: "Global Presence",
     description: "Serving clients across continents with reliable solutions.",
     icon: Globe,
-  },
-  {
-    name: "Sustainable Practices",
-    description:
-      "Committed to eco-friendly manufacturing and responsible growth.",
-    icon: Lightbulb,
   },
 ];
 
@@ -45,14 +39,22 @@ export default function AboutSection() {
             <Image
               src="/jaydeep-building2.jpg"
               alt="About Jaydeep Industries"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
+              fill
+              className="rounded-xl object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl flex items-end p-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl flex items-end p-6 justify-between">
               <h3 className="text-white text-2xl font-bold">
                 Driving Industrial Excellence Since 1976
               </h3>
+              {/* Swastik Logo */}
+              <div className="w-40 h-40 relative">
+                <Image
+                  src="/swastik-logo.png"
+                  alt="Swastik Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </motion.div>
 
@@ -68,11 +70,14 @@ export default function AboutSection() {
                 About Jaydeep Industries
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Jaydeep Industries has been a pioneer in the industrial sector
-                for over four decades, consistently delivering high-quality
-                products and innovative solutions. Our commitment to excellence,
-                sustainability, and customer satisfaction has made us a trusted
-                name globally.
+                Established in 1976 as a specialized manufacturer, Jaydeep
+                Industries has evolved into a trusted leader in weaving
+                accessories. Our <strong>SWASTIK</strong> brand Wire Heads have
+                become synonymous with quality and reliability in the Indian
+                textile industry. Through strategic partnerships with Shree
+                Sainath Industries, we offer comprehensive solutions including{" "}
+                <strong>SSI</strong> brand Metal Reeds, ensuring our customers
+                have access to complete weaving accessory solutions.
               </p>
             </motion.div>
 

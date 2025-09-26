@@ -208,9 +208,11 @@ export default function ProfessionalAbout() {
             <Card className="bg-white/10 border border-white/20 text-white p-6 shadow-lg flex flex-col items-center justify-center h-full">
               <CardContent className="p-0 flex flex-col items-center justify-center">
                 <Award className="h-24 w-24 mx-auto mb-4 text-white" />
-                <h4 className="font-semibold text-xl mb-2">ISO 9001:2015</h4>
+                <h4 className="font-semibold text-xl mb-2">
+                  50+ Years Experience
+                </h4>
                 <p className="text-base text-gray-200">
-                  Quality Management System Certified
+                  Trusted expertise in manufacturing premium weaving reeds
                 </p>
               </CardContent>
             </Card>

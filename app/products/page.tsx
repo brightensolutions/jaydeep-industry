@@ -9,7 +9,7 @@ import PageHeroTitle from "@/components/page-hero-title"; // New import
 
 const allProducts = [
   {
-    name: "Twin Wire Healds",
+    name: " Twin Inserted Twisted Wire Healds.",
     description:
       "Manufactured in multiple wire gauges (SWG 18–34) and lengths (100–1000 mm), these healds are precision-engineered for weaving efficiency. The nickel plating provides a lustrous finish, uniform deposit, and superior corrosion resistance.",
     image: "/twin-wire-healds.jpg",

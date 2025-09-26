@@ -217,7 +217,7 @@ export default function ContactPage() {
                         href="mailto:info@jaydeep-industry.com"
                         className="text-[#0066a4] hover:underline"
                       >
-                        info@jaydeep-industry.com
+                        akd.jaydeep@gmail.com
                       </a>
                     </span>
                   </li>

@@ -21,10 +21,17 @@ import { motion } from "framer-motion";
 
 export default function MetalReedsPage() {
   const sizeRangeData = [
-    { parameter: "Count", range: "4 to 280" },
-    { parameter: "Length", range: "450 to 4200 mm" },
-    { parameter: "Width of wire", range: "2.2 to 8.0 mm" },
-    { parameter: "Thickness of frame", range: "5.0 ± 0.2 to 8.0 ± 0.2 mm" },
+    { parameter: "Count", range: "20 to 300" },
+    { parameter: "Length", range: "1000 mm to 1700 mm" },
+    { parameter: "Binding", range: "Single or Double" },
+    { parameter: "Width of Wire", range: "2.2 mm to 4.0 mm" },
+    { parameter: "Thickness of Frame", range: "5.0 ± 0.2 mm to 7.0 ± 0.2 mm" },
+  ];
+
+  const wireFrameTable = [
+    { width: "2.2 mm", thickness: "5.0 ± 0.2 mm" },
+    { width: "2.8 mm", thickness: "5.5 ± 0.2 mm" },
+    { width: "4.0 mm", thickness: "7.0 ± 0.2 mm" },
   ];
 
   return (
@@ -39,6 +46,7 @@ export default function MetalReedsPage() {
         <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-red-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Badges */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,6 +75,7 @@ export default function MetalReedsPage() {
             </div>
           </motion.div>
 
+          {/* Product Range */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,59 +93,34 @@ export default function MetalReedsPage() {
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      All Metal Reeds
-                    </h3>
-                    <p className="text-gray-700">
-                      Standard metal construction for general applications
-                    </p>
-                  </div>
-                  <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Stainless Steel Reeds
-                    </h3>
-                    <p className="text-gray-700">
-                      Corrosion-resistant for demanding environments
-                    </p>
-                  </div>
-                  <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Sulzer & Dornier Reeds
-                    </h3>
-                    <p className="text-gray-700">
-                      Specialized reeds for rapier looms
-                    </p>
-                  </div>
-                  <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Ruti &apos;C&apos; & &apos;B&apos; Type
-                    </h3>
-                    <p className="text-gray-700">
-                      Compatible with Ruti loom systems
-                    </p>
-                  </div>
-                  <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Carpet Weaving Reeds
-                    </h3>
-                    <p className="text-gray-700">
-                      Heavy-duty reeds for carpet manufacturing
-                    </p>
-                  </div>
-                  <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Water Jet Loom Reeds
-                    </h3>
-                    <p className="text-gray-700">
-                      Optimized for water jet weaving systems
-                    </p>
-                  </div>
+                  {[
+                    "All Metal Reeds",
+                    "Super Special Reeds",
+                    "Stainless Steel Reeds",
+                    "Synthetic Bound Stainless Steel or Aluminium Channel Reeds",
+                    "Ruti 'C' & 'B' Type Reeds",
+                    "Warping Reeds",
+                    "Hard Chrome Plated Warping Reeds",
+                  ].map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 bg-red-50 rounded-lg border border-red-100"
+                    >
+                      <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
+                        {item}
+                      </h3>
+                      <p className="text-gray-700">
+                        High-quality construction designed for durability and
+                        efficiency
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
           </motion.div>
 
+          {/* Special Features */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -206,6 +190,7 @@ export default function MetalReedsPage() {
             </Card>
           </motion.div>
 
+          {/* Size Range Specifications */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -222,7 +207,8 @@ export default function MetalReedsPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="overflow-x-auto">
+                {/* Main size range */}
+                <div className="overflow-x-auto mb-6">
                   <Table>
                     <TableHeader>
                       <TableRow>
@@ -246,6 +232,34 @@ export default function MetalReedsPage() {
                     </TableBody>
                   </Table>
                 </div>
+
+                {/* Wire vs Frame table */}
+                <div className="overflow-x-auto">
+                  <h4 className="font-semibold text-lg mb-3 text-[#da222a]">
+                    Width of Wire (W) vs Thickness of Frame (F)
+                  </h4>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Width of Wire (W)
+                        </TableHead>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Thickness of Frame (F)
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {wireFrameTable.map((item, idx) => (
+                        <TableRow key={idx}>
+                          <TableCell>{item.width}</TableCell>
+                          <TableCell>{item.thickness}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+
                 <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-100">
                   <h4 className="font-semibold text-lg mb-2 text-[#da222a]">
                     Applications

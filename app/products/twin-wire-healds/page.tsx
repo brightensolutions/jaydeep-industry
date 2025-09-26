@@ -34,7 +34,7 @@ export default function TwinWireHealdsPage() {
   return (
     <>
       <PageHeroTitle
-        title="Twin Wire Healds"
+        title="Twin Inserted Twisted Wire Healds"
         description="Premium Quality Wire Healds with Nickel Plating"
         themeColor="red"
       />

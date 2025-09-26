@@ -145,7 +145,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-[#0066a4] flex-shrink-0" />
-                <span className="text-gray-400">info@jaydeep-industry.com</span>
+                <span className="text-gray-400">akd.jaydeep@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#da222a] flex-shrink-0" />
