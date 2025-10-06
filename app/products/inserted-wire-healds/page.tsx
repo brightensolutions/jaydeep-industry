@@ -20,6 +20,17 @@ import PageHeroTitle from "@/components/page-hero-title";
 import { motion } from "framer-motion";
 
 export default function InsertedWireHealdsPage() {
+  const wireGauges = [
+    { gauge: "swg 18", diameter: "1.219 mm" },
+    { gauge: "swg 20", diameter: "0.914 mm" },
+    { gauge: "swg 22", diameter: "0.711 mm" },
+    { gauge: "swg 24", diameter: "0.558 mm" },
+    { gauge: "swg 27", diameter: "0.416 mm" },
+    { gauge: "swg 30", diameter: "0.314 mm" },
+    { gauge: "swg 32", diameter: "0.274 mm" },
+    { gauge: "swg 34", diameter: "0.233 mm" },
+  ];
+
   const oSeriesMailEyes = [
     { refNo: "O-1", innerDimension: "3.0 × 1.2" },
     { refNo: "O-2", innerDimension: "3.7 × 1.5" },
@@ -39,6 +50,37 @@ export default function InsertedWireHealdsPage() {
     { refNo: "H-7", innerDimension: "8.0 × 2.8" },
     { refNo: "H-8", innerDimension: "11.5 × 3.5" },
     { refNo: "H-9", innerDimension: "13.0 × 4.0" },
+  ];
+
+  const switzerlandMailEyes = [
+    { refNo: "1010 R", dimension: "2.6 × 0.9 mm" },
+    { refNo: "1020 R", dimension: "4.0 × 1.5 mm" },
+    { refNo: "355 R", dimension: "5.2 × 2.3 mm" },
+    { refNo: "385 R", dimension: "6.0 × 3.4 mm" },
+    { refNo: "390 R", dimension: "8.0 × 4.2 mm" },
+    { refNo: "450 R", dimension: "10.0 × 6.3 mm" },
+    { refNo: "360 R", dimension: "5.5 × 1.5 mm" },
+    { refNo: "373 R", dimension: "7.1 × 1.6 mm" },
+    { refNo: "1015 R", dimension: "3.2 × 1.3 mm" },
+    { refNo: "328 R", dimension: "4.2 × 2.3 mm" },
+    { refNo: "380 R", dimension: "5.6 × 2.7 mm" },
+    { refNo: "1080 R", dimension: "6.6 × 3.9 mm" },
+    { refNo: "420 R", dimension: "9.0 × 4.8 mm" },
+    { refNo: "480 R", dimension: "13.5 × 7.5 mm" },
+    { refNo: "370 R", dimension: "6.0 × 1.5 mm" },
+    { refNo: "395 R", dimension: "8.3 × 2.5 mm" },
+  ];
+
+  const loopTypes = [
+    { name: "Oblong Loops", length: "5-8 mm", width: "15-25 mm" },
+    { name: "Jacquard - Upper Oblong", length: "4.0 mm", width: "2.0 mm" },
+    { name: "Round Jacquard", length: "2.5-10.0 mm", width: "-" },
+    {
+      name: "Open End Loops",
+      length: "-",
+      width: "-",
+      shape: "'C' / 'J' Shaped",
+    },
   ];
 
   return (
@@ -81,67 +123,53 @@ export default function InsertedWireHealdsPage() {
             </div>
           </motion.div>
 
+          {/* Wire Gauges */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+            className="mb-8"
           >
-            <Card className="mb-8 shadow-xl border-gray-100">
+            <Card className="shadow-xl border-gray-100">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#da222a]">
-                  Available Loop Types
+                  Wire Gauges
                 </CardTitle>
                 <CardDescription>
-                  Comprehensive range of loop configurations for different
-                  applications
+                  Available SWG and corresponding diameter
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="text-center p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Round Loops
-                    </h3>
-                    <p className="text-gray-600">
-                      Standard circular configuration
-                    </p>
-                  </div>
-                  <div className="text-center p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Open End Loops
-                    </h3>
-                    <p className="text-gray-600">For riderless heald frames</p>
-                  </div>
-                  <div className="text-center p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Crimp Type
-                    </h3>
-                    <p className="text-gray-600">Enhanced grip configuration</p>
-                  </div>
-                  <div className="text-center p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Oblong Loops
-                    </h3>
-                    <p className="text-gray-600">
-                      Elongated design for specific applications
-                    </p>
-                  </div>
-                  <div className="text-center p-4 bg-red-50 rounded-lg border border-red-100">
-                    <h3 className="font-semibold text-lg mb-2 text-[#da222a]">
-                      Arrow Type
-                    </h3>
-                    <p className="text-gray-600">Directional configuration</p>
-                  </div>
-                </div>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="font-semibold text-[#da222a]">
+                        Wire Gauge
+                      </TableHead>
+                      <TableHead className="font-semibold text-[#da222a]">
+                        Diameter
+                      </TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {wireGauges.map((item, index) => (
+                      <TableRow key={index}>
+                        <TableCell>{item.gauge}</TableCell>
+                        <TableCell>{item.diameter}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           </motion.div>
 
+          {/* O & H Series Mail Eyes */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="grid lg:grid-cols-2 gap-8"
+            className="grid lg:grid-cols-2 gap-8 mb-8"
           >
             <Card className="shadow-xl border-gray-100">
               <CardHeader>
@@ -149,7 +177,7 @@ export default function InsertedWireHealdsPage() {
                   &apos;O&apos; Series Mail Eyes
                 </CardTitle>
                 <CardDescription>
-                  Standard O-series specifications with inner dimensions
+                  Standard O-series specifications
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -168,9 +196,7 @@ export default function InsertedWireHealdsPage() {
                     <TableBody>
                       {oSeriesMailEyes.map((item, index) => (
                         <TableRow key={index}>
-                          <TableCell className="font-medium">
-                            {item.refNo}
-                          </TableCell>
+                          <TableCell>{item.refNo}</TableCell>
                           <TableCell>{item.innerDimension}</TableCell>
                         </TableRow>
                       ))}
@@ -186,7 +212,7 @@ export default function InsertedWireHealdsPage() {
                   &apos;H&apos; Series Mail Eyes
                 </CardTitle>
                 <CardDescription>
-                  Heavy-duty H-series specifications with inner dimensions
+                  Heavy-duty H-series specifications
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -205,10 +231,101 @@ export default function InsertedWireHealdsPage() {
                     <TableBody>
                       {hSeriesMailEyes.map((item, index) => (
                         <TableRow key={index}>
-                          <TableCell className="font-medium">
-                            {item.refNo}
-                          </TableCell>
+                          <TableCell>{item.refNo}</TableCell>
                           <TableCell>{item.innerDimension}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Switzerland Inserted Bracker Mail Eyes */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+            className="mb-8"
+          >
+            <Card className="shadow-xl border-gray-100">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#da222a]">
+                  Switzerland Inserted Bracker Mail Eyes
+                </CardTitle>
+                <CardDescription>
+                  Various specifications with inner dimensions
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Ref. No
+                        </TableHead>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Inner Dimension (mm)
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {switzerlandMailEyes.map((item, index) => (
+                        <TableRow key={index}>
+                          <TableCell>{item.refNo}</TableCell>
+                          <TableCell>{item.dimension}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Loop Types */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
+            <Card className="shadow-xl border-gray-100">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#da222a]">
+                  Loop Types
+                </CardTitle>
+                <CardDescription>
+                  Available loop configurations with dimensions
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Loop Type
+                        </TableHead>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Length (mm)
+                        </TableHead>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Width (mm)
+                        </TableHead>
+                        <TableHead className="font-semibold text-[#da222a]">
+                          Shape
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {loopTypes.map((item, index) => (
+                        <TableRow key={index}>
+                          <TableCell>{item.name}</TableCell>
+                          <TableCell>{item.length}</TableCell>
+                          <TableCell>{item.width || "-"}</TableCell>
+                          <TableCell>{item.shape || "-"}</TableCell>
                         </TableRow>
                       ))}
                     </TableBody>

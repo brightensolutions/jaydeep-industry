@@ -38,7 +38,7 @@ export default function MetalReedsPage() {
     <>
       <PageHeroTitle
         title="Metal Reeds"
-        description="Comprehensive Range of Industrial Weaving Reeds - Premium quality metal reeds for all types of looms"
+        description="Comprehensive Range of Industrial Weaving Reeds - metal reeds for all types of looms"
         themeColor="red"
       />
 
