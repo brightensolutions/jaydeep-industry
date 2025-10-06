@@ -217,7 +217,8 @@ export default function ContactPage() {
                         href="mailto:info@jaydeep-industry.com"
                         className="text-[#0066a4] hover:underline"
                       >
-                        akd.jaydeep@gmail.com
+                        {" "}
+                        info@jaydeep-industry.com, akd.jaydeep@gmail.com
                       </a>
                     </span>
                   </li>
@@ -262,15 +263,15 @@ export default function ContactPage() {
                   Find Us on Map
                 </h3>
                 <div className="relative h-64 w-full bg-gray-200 rounded-lg overflow-hidden shadow-inner">
-                  <Image
-                    src="/placeholder.svg?height=300&width=500"
-                    alt="Office Location Map"
-                    fill
-                    className="object-cover opacity-70"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <MapPin className="h-12 w-12 text-gray-500" />
-                  </div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.5583465525865!2d72.858464!3d21.130167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05144c8e188f5%3A0x7f28fd279109aa9d!2sJAYDEEP%20INDUSTRIES!5e0!3m2!1sen!2sin!4v1759749248066!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </motion.div>

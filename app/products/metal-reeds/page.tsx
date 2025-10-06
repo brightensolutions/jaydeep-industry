@@ -38,7 +38,7 @@ export default function MetalReedsPage() {
     <>
       <PageHeroTitle
         title="Metal Reeds"
-        description="Comprehensive Range of Industrial Weaving Reeds - metal reeds for all types of looms"
+        description="Comprehensive Range of Industrial Weaving Reeds - Metal Reeds for all types of looms"
         themeColor="red"
       />
 
@@ -47,7 +47,7 @@ export default function MetalReedsPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Badges */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -73,7 +73,7 @@ export default function MetalReedsPage() {
                 Chrome Plated
               </Badge>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Product Range */}
           <motion.div

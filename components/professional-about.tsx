@@ -70,9 +70,10 @@ export default function ProfessionalAbout() {
                 <strong className="text-primary-blue">
                   Shree Sainath Industries
                 </strong>{" "}
-                , we offer comprehensive solutions including SSI brand Metal
-                Reeds, ensuring our customers have access to complete weaving
-                accessory solutions.
+                , we offer comprehensive solutions including SSI brand{" "}
+                <strong className="text-gray-900">Metal Reeds</strong> ,
+                ensuring our customers have access to complete weaving accessory
+                solutions.
               </p>
               <p>
                 Our commitment to innovation led us to introduce{" "}
@@ -98,9 +99,21 @@ export default function ProfessionalAbout() {
               height={400}
               className="w-full h-80 object-cover rounded-lg shadow-lg"
             />
+
+            {/* Swastik Logo Overlay */}
+            <div className="absolute top-4 right-4 w-20 h-20">
+              <Image
+                src="/swastik-logo.png"
+                alt="Swastik Logo"
+                fill
+                className="object-contain drop-shadow-lg"
+              />
+            </div>
+
+            {/* Years of Excellence Card */}
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-xl">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-red">47+</div>{" "}
+                <div className="text-3xl font-bold text-primary-red">47+</div>
                 <div className="text-sm text-gray-600">Years of Excellence</div>
               </div>
             </div>

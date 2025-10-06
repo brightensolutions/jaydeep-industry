@@ -12,7 +12,7 @@ const products = [
     description:
       "Manufactured in multiple wire gauges (SWG 18–34) and lengths (100–1000 mm), these healds are precision-engineered for weaving efficiency. The nickel plating provides a lustrous finish, uniform deposit, and superior corrosion resistance.",
     image: "/twin-wire-healds.jpg",
-    link: "/products/twin-wire-healds",
+    link: "/products/inserted-wire-healds",
   },
 
   {
@@ -20,7 +20,7 @@ const products = [
     description:
       "A complete range of metal reeds for modern looms, including Sulzer, Dornier, Rapier, Ruti, Water Jet, and Warping Reeds. Available in counts from 4 to 280, with precise dimensions, they ensure excellent fabric quality and long operational life.",
     image: "/metal-reeds.jpg",
-    link: "/products/inserted-wire-healds",
+    link: "/products/metal-reeds",
   },
 ];
 

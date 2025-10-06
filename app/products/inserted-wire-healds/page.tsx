@@ -95,7 +95,7 @@ export default function InsertedWireHealdsPage() {
         <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-red-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -121,7 +121,7 @@ export default function InsertedWireHealdsPage() {
                 O & H Series
               </Badge>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Wire Gauges */}
           <motion.div

@@ -48,7 +48,7 @@ export default function Footer() {
               Leading manufacturer of precision weaving accessories, committed
               to quality and innovation for the global textile industry.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <motion.a
                 href="#"
                 whileHover={{ scale: 1.1, color: "#da222a" }}
@@ -81,7 +81,7 @@ export default function Footer() {
               >
                 <Instagram className="h-6 w-6" />
               </motion.a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -106,22 +106,7 @@ export default function Footer() {
                   Our Products
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/feedback"
-                  className="text-gray-400 hover:text-[#da222a] transition-colors"
-                >
-                  Feedback & Inquiry
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/we-buy"
-                  className="text-gray-400 hover:text-[#da222a] transition-colors"
-                >
-                  We Buy
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="/contact"
@@ -145,7 +130,10 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-[#0066a4] flex-shrink-0" />
-                <span className="text-gray-400">akd.jaydeep@gmail.com</span>
+                <span className="text-gray-400">
+                  {" "}
+                  info@jaydeep-industry.com, akd.jaydeep@gmail.com
+                </span>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#da222a] flex-shrink-0" />
