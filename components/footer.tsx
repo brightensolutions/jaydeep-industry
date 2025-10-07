@@ -138,7 +138,7 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#da222a] flex-shrink-0" />
                 <address className="not-italic text-gray-400">
-                  D2/92-95, Bhagwati Nagar Industrial Estate, Near Navjivan
+                  D2/92-95, E1/96-99, Bhagwati Nagar Industrial Estate, Near Navjivan
                   Automotive Showroom, Bhestan, Surat - 395023 (Gujarat) India
                 </address>
               </li>

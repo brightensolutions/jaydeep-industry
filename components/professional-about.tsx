@@ -1,11 +1,9 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Award, Globe, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
 
 export default function ProfessionalAbout() {
@@ -15,128 +13,131 @@ export default function ProfessionalAbout() {
   const timelineEvents = [
     {
       year: "1976",
-      title: "Founding & Specialization",
+      title: "Foundation Built on Reliability and Quality",
       description:
-        "Jaydeep Industries was established as a small-scale manufacturing unit with the singular focus of producing premium weaving accessories for India’s then-emerging textile industry. Led by deep technical knowledge, the company built a strong reputation as one of the finest producers.",
+        "Jaydeep Industries was founded in India with a firm commitment to reliability, consistent quality, and exceptional after-sales service. What began as a small manufacturing unit soon became a trusted name in weaving accessories across the Indian textile industry.",
     },
     {
       year: "1980s - 1990s",
-      title: "Product Line Expansion & Innovation",
+      title: "Growth Through Innovation",
       description:
-        "Throughout these decades, Jaydeep expanded its product lines with the commencement of Metal Reeds production while introducing the technology of nickel plating to Wire-Healds, making our hero product more durable and efficient.",
+        "The company introduced its flagship ‘SWASTIK’ brand Twin Wire Healds, which rapidly gained recognition for their superior performance and durability. Continuous quality improvement and innovation led to the development of high-quality Nickel Plated Wire Healds with GROZ-BECKERT (formerly Bracker) inset mail eyes for high-speed Jacquard looms.",
     },
     {
-      year: "2002",
-      title: "Entry into Export Market",
+      year: "2000",
+      title: "Diversification and Product Expansion",
       description:
-        "Marked a milestone as we entered the export market - a journey that has been marked by various recognitions. Since then, Jaydeep has been conferred 4 ‘Export Excellence Awards’ and 2 ‘National Awards for Export Excellence’ by the Chamber of Commerce and the Engineering Export Promotion Council of India (EEPC), respectively.",
+        "Driven by strong customer trust, Jaydeep expanded its manufacturing portfolio to include Flat Steel Healds and Drop Wires, offering complete solutions for weaving needs across Sulzer, Rapier, Dornier, Water Jet, Carpet, Jute, Felt, and Terry-Towel looms.",
     },
     {
-      year: "2026",
-      title: "50 Years of Excellence",
+      year: "1999 - Present",
+      title: "Introduction of SWASTIK Metal Reeds",
       description:
-        "We will complete 50 years of industrial experience as well as 50 years of trust, quality, and reliability.",
+        "The launch of SWASTIK brand Metal Reeds marked another milestone, establishing a wide size range and high precision standards. Diligent service and impeccable product quality have strengthened Jaydeep’s position in both domestic and international markets.",
+    },
+    {
+      year: "Recent Years",
+      title: "Global Recognition and Excellence",
+      description:
+        "With a strong Quality Management System and consistent export performance, Jaydeep Industries has earned multiple Export Excellence Awards and continues to be recognized as a global leader in the weaving accessories industry.",
+    },
+    {
+      year: "Future",
+      title: "Continuing a Legacy of Trust and Innovation",
+      description:
+        "As Jaydeep Industries moves forward, the focus remains on innovation, customer satisfaction, and quality leadership — continuing to serve as a trusted partner to the global textile industry.",
     },
   ];
 
   return (
     <section ref={ref} className="relative overflow-hidden">
-      {/* Decorative Shadow Element (Blue themed) - Main fixed shadow (left) */}
+      {/* Decorative Background Shadows */}
       <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
-      {/* NEW: Decorative Shadow Element (Blue themed) - Near Vision and Mission (right) */}
       <div className="absolute top-[1600px] right-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div>
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Company Story */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 mt-20">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Our Legacy
-            </h3>
-            <div className="space-y-4 text-gray-600">
-              <p>
-                Established in 1976 as a specialized manufacturer, Jaydeep
-                Industries has evolved into a trusted leader in weaving
-                accessories. Our{" "}
-                <strong className="text-primary-red">SWASTIK</strong> brand Wire
-                Heads have become synonymous with quality and reliability in the
-                Indian textile industry.
-              </p>
-              <p>
-                Through strategic partnerships with{" "}
-                <strong className="text-primary-blue">
-                  Shree Sainath Industries
-                </strong>{" "}
-                , we offer comprehensive solutions including SSI brand{" "}
-                <strong className="text-gray-900">Metal Reeds</strong> ,
-                ensuring our customers have access to complete weaving accessory
-                solutions.
-              </p>
-              <p>
-                Our commitment to innovation led us to introduce{" "}
-                <strong className="text-gray-900">
-                  Nickel Plated Wire Heads
-                </strong>{" "}
-                using advanced techniques, enabling faster weaving machines and
-                meeting the demanding requirements of modern textile
-                manufacturing.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative"
-          >
-            <Image
-              src="/jaydeep-building2.jpg"
-              alt="Manufacturing Facility"
-              width={600}
-              height={400}
-              className="w-full h-80 object-cover rounded-lg shadow-lg"
-            />
 
-            {/* Swastik Logo Overlay */}
-            <div className="absolute top-4 right-4 w-20 h-20">
-              <Image
-                src="/swastik-logo.png"
-                alt="Swastik Logo"
-                fill
-                className="object-contain drop-shadow-lg"
-              />
-            </div>
+      {/* ABOUT SECTION */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-20 mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-white py-20 px-8 rounded-2xl shadow-md"
+        >
+          <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-10 text-center">
+            JAYDEEP INDUSTRIES
+            <br />
+            <span className="text-primary-red">JAYDEEP REED MFG. CO.</span>
+          </h3>
 
-            {/* Years of Excellence Card */}
-            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-xl">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-red">47+</div>
-                <div className="text-sm text-gray-600">Years of Excellence</div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+          <div className="space-y-6 text-gray-700 leading-relaxed text-justify text-lg">
+            <p>
+              Established in India on a strong foundation of{" "}
+              <strong>Reliability, Consistent Quality,</strong> and{" "}
+              <strong>After-Sales Service</strong>, Jaydeep Industries has grown
+              into a globally trusted name in the weaving accessories industry.
+              The satisfaction of Indian textile weavers and international
+              buyers has placed Jaydeep Industries on the global map as a
+              front-line manufacturer.
+            </p>
+            <p>
+              Our <strong className="text-primary-red">SWASTIK</strong> brand{" "}
+              <strong>Twin Wire Healds</strong> have established a legacy of
+              precision, durability, and reliability in the textile engineering
+              industry worldwide. Through continuous innovation, we introduced{" "}
+              <strong>High-Quality Nickel Plated Wire Healds</strong> featuring{" "}
+              <strong>GROZ-BECKERT (formerly Bracker)</strong> inset mail eyes
+              for high-speed Jacquard looms — setting new benchmarks in weaving
+              efficiency.
+            </p>
+            <p>
+              The faith and trust placed by customers across the globe
+              encouraged us to expand our product range with{" "}
+              <strong>Flat Steel Healds</strong> and <strong>Drop Wires</strong>
+              , providing comprehensive solutions to meet diverse weaving
+              requirements.
+            </p>
+            <p>
+              Our <strong className="text-primary-red">SWASTIK</strong> brand{" "}
+              <strong>Metal Reeds</strong> are known for their precision,
+              strength, and longevity. Backed by diligent service, impeccable
+              quality control, and custom-built solutions, Jaydeep Industries
+              has strengthened its presence across both domestic and
+              international markets.
+            </p>
+            <p>
+              Today, we proudly cater to the weaving needs of{" "}
+              <strong>
+                Sulzer, Rapier, Dornier, Water Jet, Carpet, Jute, Felt, and
+                Terry-Towel Looms
+              </strong>
+              , delivering products designed for performance and precision.
+            </p>
+            <p>
+              Our relentless pursuit of quality excellence has been recognized
+              with prestigious <strong>Export Excellence Awards</strong>,
+              reflecting our continued commitment to innovation, reliability,
+              and customer satisfaction across the global textile industry.
+            </p>
+          </div>
+        </motion.div>
       </div>
-      {/* Company Story - Timeline Section (Full Width with Container Padding) */}
-      <div className="py-20">
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {" "}
-          {/* This div ensures container padding */}
+
+      {/* TIMELINE SECTION - FULL WIDTH */}
+      <div className="w-full bg-gray-50 py-24">
+        <div className="max-w-[1600px] mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center mb-10"
+            className="text-center mb-16"
           >
-            <h3 className="text-3xl font-bold text-gray-900">Our Journey</h3>
+            <h3 className="text-4xl font-bold text-gray-900">Our Journey</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
               Explore the key milestones that shaped Jaydeep Industries into a
               leader in textile manufacturing.
             </p>
           </motion.div>
+
           <Timeline direction="vertical">
             {timelineEvents.map((event, index) => (
               <TimelineItem key={index} index={index} year={event.year}>
@@ -151,65 +152,64 @@ export default function ProfessionalAbout() {
           </Timeline>
         </div>
       </div>
-      {/* Vision and Mission Sections (No Background) */}
-      <div className="py-20">
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <Card className="h-full p-8 shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border-t-4 border-primary-blue hover:border-primary-blue/50">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    Our Vision
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Our vision is to be a globally trusted manufacturer of
-                    weaving accessories who have upholds the values of
-                    precision, quality, and enduring relationships while
-                    creating a legacy of innovation, development, and
-                    future-ready manufacturing.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              <Card className="h-full p-8 shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out border-t-4 border-primary-red hover:border-primary-red/50">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    Our Mission
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    We aim to manufacture superior-quality weaving aids that
-                    meet the evolving global standard by blending traditional
-                    expertise with modern systems to deliver consistent,
-                    first-rate quality and build long-term valued relationships
-                    through honesty, service and credibility.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
+
+      {/* VISION AND MISSION */}
+      <div className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <Card className="h-full p-8 shadow-lg hover:shadow-2xl border-t-4 border-primary-blue transition-all duration-300">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Our Vision
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Our vision is to be a globally trusted manufacturer of weaving
+                  accessories that uphold the values of precision, quality, and
+                  enduring relationships while creating a legacy of innovation,
+                  development, and future-ready manufacturing.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.7 }}
+          >
+            <Card className="h-full p-8 shadow-lg hover:shadow-2xl border-t-4 border-primary-red transition-all duration-300">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Our Mission
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We aim to manufacture superior-quality weaving aids that meet
+                  evolving global standards by blending traditional expertise
+                  with modern systems to deliver consistent, first-rate quality
+                  and build long-term valued relationships through honesty,
+                  service, and credibility.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </div>
-      {/* Certifications Section (Full Width Blue Background with Dotted Animation) */}
+
+      {/* CERTIFICATIONS */}
       <div className="relative pt-20 bg-primary-blue overflow-hidden">
-        {/* Dotted Overlay with Animation */}
         <div className="absolute inset-0 bg-dotted-pattern bg-[size:40px_40px] animate-move-dots z-10"></div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 p-8"
+          className="relative z-20 mx-auto max-w-7xl px-6 p-8"
         >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Quality Certifications & Standards
             </h3>
             <p className="text-lg text-gray-100">
@@ -217,9 +217,10 @@ export default function ProfessionalAbout() {
               certifications and industry standards.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <Card className="bg-white/10 border border-white/20 text-white p-6 shadow-lg flex flex-col items-center justify-center h-full">
-              <CardContent className="p-0 flex flex-col items-center justify-center">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <Card className="bg-white/10 border border-white/20 text-white p-8 shadow-lg">
+              <CardContent>
                 <Award className="h-24 w-24 mx-auto mb-4 text-white" />
                 <h4 className="font-semibold text-xl mb-2">
                   50+ Years Experience
@@ -229,8 +230,9 @@ export default function ProfessionalAbout() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border border-white/20 text-white p-6 shadow-lg flex flex-col items-center justify-center h-full">
-              <CardContent className="p-0 flex flex-col items-center justify-center">
+
+            <Card className="bg-white/10 border border-white/20 text-white p-8 shadow-lg">
+              <CardContent>
                 <Shield className="h-24 w-24 mx-auto mb-4 text-white" />
                 <h4 className="font-semibold text-xl mb-2">Quality Assured</h4>
                 <p className="text-base text-gray-200">
@@ -238,8 +240,9 @@ export default function ProfessionalAbout() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="bg-white/10 border border-white/20 text-white p-6 shadow-lg flex flex-col items-center justify-center h-full">
-              <CardContent className="p-0 flex flex-col items-center justify-center">
+
+            <Card className="bg-white/10 border border-white/20 text-white p-8 shadow-lg">
+              <CardContent>
                 <Globe className="h-24 w-24 mx-auto mb-4 text-white" />
                 <h4 className="font-semibold text-xl mb-2">Global Standards</h4>
                 <p className="text-base text-gray-200">

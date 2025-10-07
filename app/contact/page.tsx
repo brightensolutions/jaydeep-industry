@@ -237,9 +237,9 @@ export default function ContactPage() {
                   <li className="flex items-start space-x-4">
                     <MapPin className="h-6 w-6 text-[#da222a] flex-shrink-0 mt-1" />
                     <span>
-                      Address: D2/92-95, Bhagwati Nagar Industrial Estate, Near
-                      Navjivan Automotive Showroom, Bhestan, Surat - 395023
-                      (Gujarat) India
+                      Address: D2/92-95, E1/96-99, Bhagwati Nagar Industrial
+                      Estate, Near Navjivan Automotive Showroom, Bhestan, Surat
+                      - 395023 (Gujarat) India
                     </span>
                   </li>
                 </ul>

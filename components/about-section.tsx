@@ -7,18 +7,20 @@ import { Factory, Users, Globe } from "lucide-react";
 const features = [
   {
     name: "State-of-the-Art Facilities",
-    description: "Equipped with the latest technology for superior production.",
+    description:
+      "Equipped with modern technology to manufacture high-quality weaving accessories.",
     icon: Factory,
   },
   {
     name: "Experienced Team",
     description:
-      "A dedicated workforce committed to excellence and innovation.",
+      "A dedicated workforce committed to precision, innovation, and quality.",
     icon: Users,
   },
   {
     name: "Global Presence",
-    description: "Serving clients across continents with reliable solutions.",
+    description:
+      "Serving clients across India and international markets with trusted solutions.",
     icon: Globe,
   },
 ];
@@ -46,7 +48,6 @@ export default function AboutSection() {
               <h3 className="text-white text-2xl font-bold">
                 Driving Industrial Excellence Since 1976
               </h3>
-              {/* Swastik Logo */}
               <div className="w-40 h-40 relative">
                 <Image
                   src="/swastik-logo.png"
@@ -70,17 +71,27 @@ export default function AboutSection() {
                 About Jaydeep Industries
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Established in 1976 as a specialized manufacturer, Jaydeep
-                Industries has evolved into a trusted leader in weaving
-                accessories. Our <strong>SWASTIK</strong> brand Wire Heads have
-                become synonymous with quality and reliability in the Indian
-                textile industry. Through strategic partnerships with Shree
-                Sainath Industries, we offer comprehensive solutions including{" "}
-                <strong>SSI</strong> brand Metal Reeds, ensuring our customers
-                have access to complete weaving accessory solutions.
+                Established in 1976, Jaydeep Industries is built on{" "}
+                <strong className="text-gray-900">Reliability, Quality,</strong>{" "}
+                and{" "}
+                <strong className="text-gray-900">After-Sales Service</strong>.
+                Our <strong className="text-primary-red">SWASTIK</strong> brand
+                Twin Wire Healds and Metal Reeds are trusted in India and abroad
+                for their precision, durability, and superior performance.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We continuously innovate with products like{" "}
+                <strong className="text-gray-900">
+                  Nickel Plated Wire Healds
+                </strong>
+                ,<strong className="text-gray-900">Flat Steel Healds</strong>,
+                and <strong className="text-gray-900">Drop Wires</strong> to
+                meet modern weaving needs across Sulzer, Rapier, Dornier, Water
+                Jet, Carpet, Jute, Felt, and Terry-Towel looms.
               </p>
             </motion.div>
 
+            {/* Features Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
                 <motion.div
