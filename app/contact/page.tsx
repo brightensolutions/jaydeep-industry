@@ -66,7 +66,7 @@ export default function ContactPage() {
     <>
       <PageHeroTitle
         title="Contact Us"
-        description="Get in touch with Jaydeep Industries for inquiries, support, or partnerships."
+        description="Get in touch with Jaydeep Industries for inquiries, support, or feedback."
         themeColor="blue"
       />
       <section className="relative py-16 md:py-24 bg-white overflow-hidden">
@@ -83,8 +83,8 @@ export default function ContactPage() {
               Contact Jaydeep Industries
             </h2>
             <p className="text-lg text-gray-600 mt-4">
-              We are here to assist you with any inquiries, support, or
-              partnerships you may need.
+              We are here to assist you with any inquiries, support, or feedback
+              you may need.
             </p>
           </motion.div>
 
@@ -227,17 +227,17 @@ export default function ContactPage() {
                     <span>
                       Phone:{" "}
                       <a
-                        href="tel:+91XXXXXXXXXX"
+                        href="tel:+919825311311"
                         className="text-[#0066a4] hover:underline"
                       >
-                        +91 9825311311
+                        +91 9825311311, +91 2612912700
                       </a>
                     </span>
                   </li>
                   <li className="flex items-start space-x-4">
                     <MapPin className="h-6 w-6 text-[#da222a] flex-shrink-0 mt-1" />
                     <span>
-                      Address: D2/92-95, E1/96-99, Bhagwati Nagar Industrial
+                      Address: D2/92-95 and E1/96-99, Bhagwati Nagar Industrial
                       Estate, Near Navjivan Automotive Showroom, Bhestan, Surat
                       - 395023 (Gujarat) India
                     </span>
@@ -250,11 +250,7 @@ export default function ContactPage() {
                   Business Hours
                 </h3>
                 <p className="text-gray-700">
-                  Monday - Friday: 9:00 AM - 6:00 PM
-                  <br />
-                  Saturday: 9:00 AM - 1:00 PM
-                  <br />
-                  Sunday: Closed
+                  Monday - Saturday: 11:00 AM - 5:00 PM
                 </p>
               </div>
 

@@ -92,7 +92,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/group"
+                  href="/about"
                   className="text-gray-400 hover:text-[#da222a] transition-colors"
                 >
                   About Us
@@ -126,7 +126,9 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-[#da222a] flex-shrink-0" />
-                <span className="text-gray-400">+91 9825311311</span>
+                <span className="text-gray-400">
+                  +91 9825311311, +91 2612912700
+                </span>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-[#0066a4] flex-shrink-0" />
@@ -138,8 +140,9 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#da222a] flex-shrink-0" />
                 <address className="not-italic text-gray-400">
-                  D2/92-95, E1/96-99, Bhagwati Nagar Industrial Estate, Near Navjivan
-                  Automotive Showroom, Bhestan, Surat - 395023 (Gujarat) India
+                  D2/92-95 and E1/96-99, Bhagwati Nagar Industrial Estate, Near
+                  Navjivan Automotive Showroom, Bhestan, Surat - 395023
+                  (Gujarat) India
                 </address>
               </li>
             </ul>

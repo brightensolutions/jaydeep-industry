@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Factory, Users, Globe } from "lucide-react";
+import { Factory, Users, Globe, Star } from "lucide-react"; // Added Star icon
 
 const features = [
   {
@@ -22,6 +22,12 @@ const features = [
     description:
       "Serving clients across India and international markets with trusted solutions.",
     icon: Globe,
+  },
+  {
+    name: "Export House Recognition",
+    description:
+      "Recognized by the Government of India for excellence in exports.",
+    icon: Star,
   },
 ];
 
@@ -45,9 +51,11 @@ export default function AboutSection() {
               className="rounded-xl object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl flex items-end p-6 justify-between">
-              <h3 className="text-white text-2xl font-bold">
-                Driving Industrial Excellence Since 1976
-              </h3>
+              <div>
+                <h3 className="text-white text-2xl font-bold">
+                  Driving Industrial Excellence Since 1976
+                </h3>
+              </div>
               <div className="w-40 h-40 relative">
                 <Image
                   src="/swastik-logo.png"
@@ -84,7 +92,7 @@ export default function AboutSection() {
                 <strong className="text-gray-900">
                   Nickel Plated Wire Healds
                 </strong>
-                ,<strong className="text-gray-900">Flat Steel Healds</strong>,
+                , <strong className="text-gray-900">Flat Steel Healds</strong>,
                 and <strong className="text-gray-900">Drop Wires</strong> to
                 meet modern weaving needs across Sulzer, Rapier, Dornier, Water
                 Jet, Carpet, Jute, Felt, and Terry-Towel looms.

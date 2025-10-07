@@ -16,7 +16,7 @@ export default function ContactCta() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-4xl font-extrabold mb-4">
-            Ready to Partner with Jaydeep Industries?
+            Let’s Build Success Together
           </h2>
           <p className="text-lg max-w-3xl mx-auto mb-8 opacity-90">
             Whether you have an inquiry, need a custom solution, or want to

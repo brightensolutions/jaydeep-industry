@@ -63,11 +63,9 @@ export default function ProfessionalAbout() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-white py-20 px-8 rounded-2xl shadow-md"
         >
-          <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-10 text-center">
+          {/* <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-10 text-center">
             JAYDEEP INDUSTRIES
-            <br />
-            <span className="text-primary-red">JAYDEEP REED MFG. CO.</span>
-          </h3>
+          </h3> */}
 
           <div className="space-y-6 text-gray-700 leading-relaxed text-justify text-md">
             <p>
