@@ -69,7 +69,7 @@ export default function ProfessionalAbout() {
             <span className="text-primary-red">JAYDEEP REED MFG. CO.</span>
           </h3>
 
-          <div className="space-y-6 text-gray-700 leading-relaxed text-justify text-lg">
+          <div className="space-y-6 text-gray-700 leading-relaxed text-justify text-md">
             <p>
               Established in India on a strong foundation of{" "}
               <strong>Reliability, Consistent Quality,</strong> and{" "}

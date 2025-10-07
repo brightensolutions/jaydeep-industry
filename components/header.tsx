@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Phone, Mail, Award } from "lucide-react";
+import { Menu, X, Phone, Mail, Map, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -182,21 +182,25 @@ export default function MainHeader() {
                       <div className="p-2 bg-[#da222a]/20 rounded-full">
                         <Phone className="h-4 w-4 text-[#da222a]" />
                       </div>
-                      <span className="font-bold">+91 XXX XXX XXXX</span>
+                      <span className="font-bold">+91 9825311311</span>
                     </div>
                     <div className="flex items-center space-x-3 text-sm text-white mb-3">
                       <div className="p-2 bg-[#0066a4]/20 rounded-full">
                         <Mail className="h-4 w-4 text-[#0066a4]" />
                       </div>
                       <span className="font-bold">
-                        info@jaydeep-industry.com
+                        info@jaydeep-industry.com, akd.jaydeep@gmail.com
                       </span>
                     </div>
-                    <div className="flex items-center space-x-3 text-sm text-white">
-                      <div className="p-2 bg-yellow-100/20 rounded-full">
-                        <Award className="h-4 w-4 text-yellow-400" />
+                    <div className="flex items-center space-x-3 text-sm text-white mb-3">
+                      <div className="p-2 bg-[#0066a4]/20 rounded-full">
+                        <Map className="h-4 w-4 text-[#0066a4]" />
                       </div>
-                      <span className="font-bold">ISO 9001:2015 Certified</span>
+                      <span className="font-bold">
+                        D2/92-95, E1/96-99, Bhagwati Nagar Industrial Estate,
+                        Near Navjivan Automotive Showroom, Bhestan, Surat -
+                        395023 (Gujarat) India
+                      </span>
                     </div>
                   </motion.div>
 
