@@ -26,9 +26,9 @@ export default function GlobalMapSection() {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
 
   return (
-    <section className="relative py-24 md:py-32 bg-gray-50 overflow-hidden">
-      <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
-      <div className="absolute bottom-1/3 right-0 w-[600px] h-[600px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div>
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      {/* <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-gradient-black-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
+      <div className="absolute bottom-1/3 right-0 w-[600px] h-[600px] bg-gradient-black-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div> */}
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -59,7 +59,7 @@ export default function GlobalMapSection() {
           <img
             src="/world.svg"
             alt="World Map"
-            className="w-full h-full rounded-3xl border-2 border-primary-blue/20 shadow-xl object-contain"
+            className="w-full h-full rounded-3xl border-2 border-primary-black/20 shadow-xl object-contain"
           />
 
           {/* Country Markers */}
@@ -94,9 +94,9 @@ export default function GlobalMapSection() {
               )}
 
               <div
-                className={`relative w-6 h-6 rounded-full bg-gradient-to-br from-primary-blue to-primary-red border-2 border-white shadow-lg transition-all duration-300 ${
+                className={`relative w-6 h-6 rounded-full bg-gradient-to-br from-primary-black to-primary-red border-2 border-white shadow-lg transition-all duration-300 ${
                   hoveredCountry === country.code
-                    ? "scale-125 shadow-primary-blue/50"
+                    ? "scale-125 shadow-primary-black/50"
                     : ""
                 }`}
               >
@@ -113,7 +113,7 @@ export default function GlobalMapSection() {
                 transition={{ duration: 0.2 }}
                 style={{ pointerEvents: "none" }}
               >
-                <div className="px-4 py-2 rounded-lg bg-primary-blue border border-primary-blue/50 backdrop-blur-sm shadow-xl">
+                <div className="px-4 py-2 rounded-lg bg-primary-black border border-primary-black/50 backdrop-blur-sm shadow-xl">
                   <p className="text-sm font-semibold text-white">
                     {country.name}
                   </p>
@@ -134,7 +134,7 @@ export default function GlobalMapSection() {
           {countries.map((country, index) => (
             <motion.div
               key={country.code}
-              className="px-4 py-2 rounded-full bg-white border border-gray-200 hover:border-primary-blue hover:bg-primary-blue/5 transition-all duration-300 cursor-pointer shadow-sm"
+              className="px-4 py-2 rounded-full bg-white border border-gray-200 hover:border-primary-black hover:bg-primary-black/5 transition-all duration-300 cursor-pointer shadow-sm"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -145,7 +145,7 @@ export default function GlobalMapSection() {
               <span
                 className={`text-sm font-medium transition-colors duration-300 ${
                   hoveredCountry === country.code
-                    ? "text-primary-blue"
+                    ? "text-primary-black"
                     : "text-gray-700"
                 }`}
               >

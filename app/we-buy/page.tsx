@@ -73,13 +73,13 @@ export default function WeBuyPage() {
       <PageHeroTitle
         title="We Buy"
         description="Information about materials or products Jaydeep Industries is interested in purchasing."
-        themeColor="blue"
+        themeColor="black"
       />
 
       {/* ✅ Fullscreen centered form */}
       <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden py-16 md:py-24">
         {/* Background gradient */}
-        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-to-r from-blue-100 to-blue-200 shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-to-r from-black-100 to-black-200 shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
 
         {/* Centered container */}
         <div className="relative z-10 w-full max-w-2xl px-4 sm:px-6 lg:px-8">
@@ -108,7 +108,7 @@ export default function WeBuyPage() {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="John Doe"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                   required
                 />
               </div>
@@ -126,7 +126,7 @@ export default function WeBuyPage() {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="john.doe@example.com"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                   required
                 />
               </div>
@@ -144,7 +144,7 @@ export default function WeBuyPage() {
                   value={formData.material}
                   onChange={handleInputChange}
                   placeholder="e.g., Copper Scrap, HDPE Plastic"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                   required
                 />
               </div>
@@ -162,7 +162,7 @@ export default function WeBuyPage() {
                   value={formData.quantity}
                   onChange={handleInputChange}
                   placeholder="e.g., 5 tons, 100 kg"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                   required
                 />
               </div>
@@ -180,7 +180,7 @@ export default function WeBuyPage() {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Any other relevant information..."
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                 />
               </div>
 
@@ -221,7 +221,7 @@ export default function WeBuyPage() {
             <Button
               asChild
               size="lg"
-              className="!bg-[#0066a4] !hover:bg-[#0066a4]/90 !text-white font-bold rounded-xl px-8 py-3 shadow-lg"
+              className="!bg-[#000000] !hover:bg-[#000000]/90 !text-white font-bold rounded-xl px-8 py-3 shadow-lg"
             >
               <Link href="/contact">
                 <Mail className="mr-2 h-5 w-5" />
@@ -232,7 +232,7 @@ export default function WeBuyPage() {
             <Button
               asChild
               size="lg"
-              className="!border-2 !border-[#0066a4] !text-[#0066a4] !bg-transparent !hover:bg-[#0066a4] !hover:text-white !font-bold !rounded-xl !px-8 !py-3 !shadow-xl !hover:shadow-2xl !transition-all !duration-300"
+              className="!border-2 !border-[#000000] !text-[#000000] !bg-transparent !hover:bg-[#000000] !hover:text-white !font-bold !rounded-xl !px-8 !py-3 !shadow-xl !hover:shadow-2xl !transition-all !duration-300"
             >
               <Link
                 href="tel:+91XXXXXXXXXX"

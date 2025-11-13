@@ -72,10 +72,10 @@ export default function FeedbackPage() {
       <PageHeroTitle
         title="Feedback & Inquiry"
         description="Provide your feedback or send us an inquiry."
-        themeColor="blue"
+        themeColor="black"
       />
       <section className="relative py-16 md:py-24 bg-white overflow-hidden">
-        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-to-r from-blue-100 to-blue-200 shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-to-r from-black-100 to-black-200 shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -83,7 +83,7 @@ export default function FeedbackPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">
+            <h2 className="text-4xl font-extrabold text-[#000000] mb-4">
               Your Feedback Matters to Us
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
@@ -134,7 +134,7 @@ export default function FeedbackPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                    className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                   />
                 </div>
                 <div>
@@ -152,7 +152,7 @@ export default function FeedbackPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                    className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                   />
                 </div>
                 <div>
@@ -167,7 +167,7 @@ export default function FeedbackPage() {
                     name="type"
                     value={formData.type}
                     onChange={handleInputChange}
-                    className="block w-full p-3 border border-gray-300 rounded-lg focus:border-[#0066a4] focus:ring-[#0066a4] bg-white text-gray-700"
+                    className="block w-full p-3 border border-gray-300 rounded-lg focus:border-[#000000] focus:ring-[#000000] bg-white text-gray-700"
                   >
                     <option>General Feedback</option>
                     <option>Product Suggestion</option>
@@ -191,7 +191,7 @@ export default function FeedbackPage() {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                    className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                   />
                 </div>
                 <Button

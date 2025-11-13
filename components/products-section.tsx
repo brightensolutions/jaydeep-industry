@@ -26,9 +26,9 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-gray-50 overflow-hidden">
       {/* Decorative Shadow Element (Red themed) */}
-      <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-gradient-red-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
+      {/* <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-gradient-red-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div> */}
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -100,7 +100,7 @@ export default function ProductsSection() {
           <Button
             asChild
             size="lg"
-            className="!bg-[#0066a4] !hover:bg-[#0066a4]/90 !text-white !font-bold !rounded-xl !px-8 !py-3 !shadow-lg"
+            className="!bg-[#000000] !hover:bg-[#000000]/90 !text-white !font-bold !rounded-xl !px-8 !py-3 !shadow-lg"
           >
             <Link href="/products">Explore All Products</Link>
           </Button>

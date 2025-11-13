@@ -118,7 +118,7 @@ export default function HeroSlider() {
                 <Button
                   asChild
                   size="lg"
-                  className="!bg-[#0066a4] !hover:bg-[#0066a4]/90 !text-white !font-bold !text-lg !rounded-full !px-8 !py-3 !shadow-xl !hover:shadow-2xl transition-all duration-300"
+                  className="!bg-[#000000] !hover:bg-[#000000]/90 !text-white !font-bold !text-lg !rounded-full !px-8 !py-3 !shadow-xl !hover:shadow-2xl transition-all duration-300"
                 >
                   <Link href="/products" className="inline-block text-center">
                     Explore All Products

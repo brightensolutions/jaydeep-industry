@@ -33,7 +33,7 @@ const features = [
 
 export default function AboutSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#0066a4]/5">
+    <section className="py-16 md:py-24 bg-[#000000]/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
@@ -75,7 +75,7 @@ export default function AboutSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">
+              <h2 className="text-4xl font-extrabold text-[#000000] mb-4">
                 About Jaydeep Industries
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">

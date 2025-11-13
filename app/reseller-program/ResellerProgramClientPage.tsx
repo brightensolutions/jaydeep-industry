@@ -13,12 +13,12 @@ export default function ResellerProgramClientPage() {
       <PageHeroTitle
         title="Reseller Program"
         description="Partner with Jaydeep Industries and grow your business with our high-quality products."
-        themeColor="blue"
+        themeColor="black"
       />
 
       <section className="relative py-16 md:py-24 bg-white overflow-hidden">
-        {/* Decorative Shadow Element (Blue themed) - Increased size and blur */}
-        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-blue-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+        {/* Decorative Shadow Element (black themed) - Increased size and blur */}
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-black-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -26,7 +26,7 @@ export default function ResellerProgramClientPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">
+            <h2 className="text-4xl font-extrabold text-[#000000] mb-4">
               Join Our Reseller Network
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
@@ -105,7 +105,7 @@ export default function ResellerProgramClientPage() {
                   id="companyName"
                   type="text"
                   placeholder="Your Company Name"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                 />
               </div>
               <div>
@@ -119,7 +119,7 @@ export default function ResellerProgramClientPage() {
                   id="contactPerson"
                   type="text"
                   placeholder="John Doe"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                 />
               </div>
               <div>
@@ -133,7 +133,7 @@ export default function ResellerProgramClientPage() {
                   id="email"
                   type="email"
                   placeholder="john.doe@example.com"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                 />
               </div>
               <div>
@@ -147,7 +147,7 @@ export default function ResellerProgramClientPage() {
                   id="phone"
                   type="tel"
                   placeholder="+1 (555) 123-4567"
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                 />
               </div>
               <div>
@@ -162,7 +162,7 @@ export default function ResellerProgramClientPage() {
                   id="message"
                   rows={5}
                   placeholder="Describe your business..."
-                  className="border-gray-300 focus:border-[#0066a4] focus:ring-[#0066a4]"
+                  className="border-gray-300 focus:border-[#000000] focus:ring-[#000000]"
                 />
               </div>
               <Button

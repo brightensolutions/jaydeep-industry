@@ -48,7 +48,7 @@ export default function ProductsPage() {
       />
       <section className="relative py-16 md:py-24 bg-white overflow-hidden">
         {/* Decorative Shadow Element (Red themed) - Increased size and blur */}
-        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-red-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+        {/* <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-red-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div> */}
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div

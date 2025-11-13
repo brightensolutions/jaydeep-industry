@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { Factory, Users, Globe, Lightbulb } from "lucide-react"
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Factory, Users, Globe, Lightbulb } from "lucide-react";
 
 const features = [
   {
@@ -12,7 +12,8 @@ const features = [
   },
   {
     name: "Experienced Team",
-    description: "A dedicated workforce committed to excellence and innovation.",
+    description:
+      "A dedicated workforce committed to excellence and innovation.",
     icon: Users,
   },
   {
@@ -22,14 +23,15 @@ const features = [
   },
   {
     name: "Sustainable Practices",
-    description: "Committed to eco-friendly manufacturing and responsible growth.",
+    description:
+      "Committed to eco-friendly manufacturing and responsible growth.",
     icon: Lightbulb,
   },
-]
+];
 
 export default function LightAboutSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#0066a4]/5">
+    <section className="py-16 md:py-24 bg-[#000000]/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
@@ -48,7 +50,9 @@ export default function LightAboutSection() {
               className="rounded-xl"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl flex items-end p-6">
-              <h3 className="text-white text-2xl font-bold">Driving Industrial Excellence Since 1976</h3>
+              <h3 className="text-white text-2xl font-bold">
+                Driving Industrial Excellence Since 1976
+              </h3>
             </div>
           </motion.div>
 
@@ -60,11 +64,15 @@ export default function LightAboutSection() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              <h2 className="text-4xl font-extrabold text-[#0066a4] mb-4">About Jaydeep Industries</h2>
+              <h2 className="text-4xl font-extrabold text-[#000000] mb-4">
+                About Jaydeep Industries
+              </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Jaydeep Industries has been a pioneer in the industrial sector for over four decades, consistently
-                delivering high-quality products and innovative solutions. Our commitment to excellence, sustainability,
-                and customer satisfaction has made us a trusted name globally.
+                Jaydeep Industries has been a pioneer in the industrial sector
+                for over four decades, consistently delivering high-quality
+                products and innovative solutions. Our commitment to excellence,
+                sustainability, and customer satisfaction has made us a trusted
+                name globally.
               </p>
             </motion.div>
 
@@ -75,14 +83,20 @@ export default function LightAboutSection() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 + index * 0.1 }}
+                  transition={{
+                    duration: 0.8,
+                    ease: "easeOut",
+                    delay: 0.4 + index * 0.1,
+                  }}
                   className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-md border border-gray-100"
                 >
                   <div className="flex-shrink-0 p-3 rounded-full bg-[#da222a]/10 text-[#da222a]">
                     <feature.icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-[#1a1a1a]">{feature.name}</h4>
+                    <h4 className="text-xl font-semibold text-[#1a1a1a]">
+                      {feature.name}
+                    </h4>
                     <p className="mt-1 text-gray-600">{feature.description}</p>
                   </div>
                 </motion.div>
@@ -92,5 +106,5 @@ export default function LightAboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

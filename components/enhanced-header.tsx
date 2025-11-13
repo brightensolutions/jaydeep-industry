@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X, Phone, Mail, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -14,19 +14,19 @@ const navigation = [
   { name: "Feedback & Inquiry", href: "/feedback" },
   { name: "We Buy", href: "/we-buy" },
   { name: "Contact", href: "/contact" },
-]
+];
 
 export default function EnhancedHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -64,7 +64,9 @@ export default function EnhancedHeader() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="hidden lg:flex items-center space-x-4"
             >
-              <span className="text-red-200 font-medium">ISO 9001:2015 Certified</span>
+              <span className="text-red-200 font-medium">
+                ISO 9001:2015 Certified
+              </span>
               <span className="text-gray-300">|</span>
               <span className="text-red-200 font-medium">Since 1976</span>
             </motion.div>
@@ -96,7 +98,7 @@ export default function EnhancedHeader() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
-                  className="relative p-2 bg-gradient-to-br from-red-50 to-blue-50 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300"
+                  className="relative p-2 bg-gradient-to-br from-red-50 to-black-50 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300"
                 >
                   <Image
                     src="/logo.png"
@@ -109,7 +111,7 @@ export default function EnhancedHeader() {
                 <div>
                   <motion.h1
                     whileHover={{ scale: 1.02 }}
-                    className="text-2xl font-bold bg-gradient-to-r from-red-600 via-blue-600 to-black bg-clip-text text-transparent"
+                    className="text-2xl font-bold bg-gradient-to-r from-red-600 via-black-600 to-black bg-clip-text text-transparent"
                   >
                     JAYDEEP INDUSTRIES
                   </motion.h1>
@@ -139,10 +141,13 @@ export default function EnhancedHeader() {
                       href={item.href}
                       className="relative px-4 py-3 text-gray-700 hover:text-red-600 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group rounded-lg hover:bg-red-50"
                     >
-                      <motion.span whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+                      <motion.span
+                        whileHover={{ y: -1 }}
+                        transition={{ duration: 0.2 }}
+                      >
                         {item.name}
                       </motion.span>
-                      <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-red-600 to-blue-600 transition-all duration-300 group-hover:w-8"></span>
+                      <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-red-600 to-black-600 transition-all duration-300 group-hover:w-8"></span>
                     </Link>
                   </motion.div>
                 ))}
@@ -156,7 +161,10 @@ export default function EnhancedHeader() {
               transition={{ delay: 0.8, duration: 0.5 }}
               className="hidden lg:flex items-center space-x-3"
             >
-              <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   asChild
                   variant="outline"
@@ -166,11 +174,14 @@ export default function EnhancedHeader() {
                   <Link href="/feedback">Request Quote</Link>
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   asChild
                   size="sm"
-                  className="bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
+                  className="bg-gradient-to-r from-red-600 to-black-600 hover:from-red-700 hover:to-black-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
                 >
                   <Link href="/contact">Contact Us</Link>
                 </Button>
@@ -258,7 +269,7 @@ export default function EnhancedHeader() {
                     <Button
                       asChild
                       size="sm"
-                      className="w-full bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 text-white font-semibold"
+                      className="w-full bg-gradient-to-r from-red-600 to-black-600 hover:from-red-700 hover:to-black-700 text-white font-semibold"
                     >
                       <Link href="/contact">Contact Us</Link>
                     </Button>
@@ -270,5 +281,5 @@ export default function EnhancedHeader() {
         </nav>
       </motion.header>
     </>
-  )
+  );
 }

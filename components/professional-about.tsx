@@ -52,8 +52,8 @@ export default function ProfessionalAbout() {
   return (
     <section ref={ref} className="relative overflow-hidden">
       {/* Decorative Background Shadows */}
-      <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
-      <div className="absolute top-[1600px] right-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div>
+      {/* <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-gradient-black-shadow shadow-2xl blur-2xl rounded-full z-0 -translate-x-1/2"></div>
+      <div className="absolute top-[1600px] right-0 w-[700px] h-[700px] bg-gradient-black-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div> */}
 
       {/* ABOUT SECTION */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-20 mb-20">
@@ -61,7 +61,7 @@ export default function ProfessionalAbout() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white py-20 px-8 rounded-2xl shadow-md"
+          className="bg-gray-50 py-20 px-8 rounded-2xl shadow-md"
         >
           {/* <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-10 text-center">
             JAYDEEP INDUSTRIES
@@ -83,9 +83,9 @@ export default function ProfessionalAbout() {
               precision, durability, and reliability in the textile engineering
               industry worldwide. Through continuous innovation, we introduced{" "}
               <strong>High-Quality Nickel Plated Wire Healds</strong> featuring{" "}
-              <strong>GROZ-BECKERT (formerly Bracker)</strong> inset mail eyes
-              for high-speed Jacquard looms — setting new benchmarks in weaving
-              efficiency.
+              <strong>GROZ-BECKERT (formerly Bracker)</strong>{" "}
+              <em>inset mail eyes</em> for high-speed Jacquard looms — setting
+              new benchmarks in weaving efficiency.
             </p>
             <p>
               The faith and trust placed by customers across the globe
@@ -159,7 +159,7 @@ export default function ProfessionalAbout() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <Card className="h-full p-8 shadow-lg hover:shadow-2xl border-t-4 border-primary-blue transition-all duration-300">
+            <Card className="h-full p-8 shadow-lg hover:shadow-2xl border-t-4 border-primary-black transition-all duration-300">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Our Vision
@@ -198,7 +198,7 @@ export default function ProfessionalAbout() {
       </div>
 
       {/* CERTIFICATIONS */}
-      <div className="relative pt-20 bg-primary-blue overflow-hidden">
+      <div className="relative pt-20 bg-primary-black overflow-hidden">
         <div className="absolute inset-0 bg-dotted-pattern bg-[size:40px_40px] animate-move-dots z-10"></div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

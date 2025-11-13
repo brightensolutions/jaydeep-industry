@@ -59,7 +59,7 @@ export default function Footer() {
               </motion.a>
               <motion.a
                 href="#"
-                whileHover={{ scale: 1.1, color: "#0066a4" }}
+                whileHover={{ scale: 1.1, color: "#000000" }}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
@@ -75,7 +75,7 @@ export default function Footer() {
               </motion.a>
               <motion.a
                 href="#"
-                whileHover={{ scale: 1.1, color: "#0066a4" }}
+                whileHover={{ scale: 1.1, color: "#000000" }}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
@@ -131,7 +131,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <Mail className="h-5 w-5 text-[#0066a4] flex-shrink-0" />
+                <Mail className="h-5 w-5 text-[#000000] flex-shrink-0" />
                 <span className="text-gray-400">
                   {" "}
                   info@jaydeep-industry.com, akd.jaydeep@gmail.com
@@ -140,9 +140,9 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-[#da222a] flex-shrink-0" />
                 <address className="not-italic text-gray-400">
-                  D2/92-95 and E1/96-99, Bhagwati Nagar Industrial Estate, Near
-                  Navjivan Automotive Showroom, Bhestan, Surat - 395023
-                  (Gujarat) India
+                  Plot no. D2/92-95 & E1/96-99, Bhagwati Nagar Industrial
+                  Estate, Near Navjivan Automobile Showroom, Bhestan, Surat -
+                  395023 (Gujarat) India
                 </address>
               </li>
             </ul>

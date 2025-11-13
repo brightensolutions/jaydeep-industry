@@ -12,9 +12,9 @@ export default function AboutPage() {
   return (
     <main>
       <PageHeroTitle
-        title="About Jaydeep Industries"
+        title="Jaydeep Industries"
         description="Discover our journey of excellence, our core values, and our commitment to innovation in the textile industry."
-        themeColor="blue"
+        themeColor="black"
       />
       <ProfessionalAbout />
     </main>

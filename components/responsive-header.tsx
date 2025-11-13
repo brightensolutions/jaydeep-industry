@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X, Phone, Mail, MapPin, Award } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Phone, Mail, MapPin, Award } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -14,19 +14,19 @@ const navigation = [
   { name: "Feedback & Inquiry", href: "/feedback" },
   { name: "We Buy", href: "/we-buy" },
   { name: "Contact", href: "/contact" },
-]
+];
 
 export default function ResponsiveHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -66,7 +66,9 @@ export default function ResponsiveHeader() {
             >
               <div className="flex items-center space-x-2">
                 <Award className="h-4 w-4 text-red-400" />
-                <span className="text-gray-300 font-medium">ISO 9001:2015 Certified</span>
+                <span className="text-gray-300 font-medium">
+                  ISO 9001:2015 Certified
+                </span>
               </div>
               <span className="text-gray-600">|</span>
               <span className="text-gray-300 font-medium">Since 1976</span>
@@ -132,7 +134,10 @@ export default function ResponsiveHeader() {
                       href={item.href}
                       className="relative px-4 xl:px-6 py-3 text-gray-800 hover:text-red-600 font-bold text-base xl:text-lg transition-all duration-300 group rounded-lg hover:bg-red-50"
                     >
-                      <motion.span whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+                      <motion.span
+                        whileHover={{ y: -1 }}
+                        transition={{ duration: 0.2 }}
+                      >
                         {item.name}
                       </motion.span>
                       <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-8"></span>
@@ -149,7 +154,10 @@ export default function ResponsiveHeader() {
               transition={{ delay: 0.8, duration: 0.5 }}
               className="hidden md:flex items-center space-x-2 lg:space-x-3"
             >
-              <motion.div whileHover={{ scale: 1.05, y: -1 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05, y: -1 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   asChild
                   variant="outline"
@@ -159,11 +167,14 @@ export default function ResponsiveHeader() {
                   <Link href="/feedback">Request Quote</Link>
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05, y: -1 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05, y: -1 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Button
                   asChild
                   size="sm"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 lg:px-6 text-sm lg:text-base shadow-md hover:shadow-lg transition-all duration-300"
+                  className="bg-black-600 hover:bg-black-700 text-white font-semibold px-4 lg:px-6 text-sm lg:text-base shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   <Link href="/contact">Contact Us</Link>
                 </Button>
@@ -226,8 +237,10 @@ export default function ResponsiveHeader() {
                       <span className="font-medium">+91 XXX XXX XXXX</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
-                      <Award className="h-4 w-4 text-blue-600" />
-                      <span className="font-medium">ISO 9001:2015 Certified</span>
+                      <Award className="h-4 w-4 text-black-600" />
+                      <span className="font-medium">
+                        ISO 9001:2015 Certified
+                      </span>
                     </div>
                   </div>
 
@@ -262,16 +275,22 @@ export default function ResponsiveHeader() {
                       size="lg"
                       className="w-full border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white bg-white font-bold text-base"
                     >
-                      <Link href="/feedback" onClick={() => setMobileMenuOpen(false)}>
+                      <Link
+                        href="/feedback"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
                         Request Quote
                       </Link>
                     </Button>
                     <Button
                       asChild
                       size="lg"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-base"
+                      className="w-full bg-black-600 hover:bg-black-700 text-white font-bold text-base"
                     >
-                      <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                      <Link
+                        href="/contact"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
                         Contact Us
                       </Link>
                     </Button>
@@ -283,5 +302,5 @@ export default function ResponsiveHeader() {
         </nav>
       </motion.header>
     </>
-  )
+  );
 }

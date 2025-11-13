@@ -67,10 +67,10 @@ export default function ContactPage() {
       <PageHeroTitle
         title="Contact Us"
         description="Get in touch with Jaydeep Industries for inquiries, support, or feedback."
-        themeColor="blue"
+        themeColor="black"
       />
       <section className="relative py-16 md:py-24 bg-white overflow-hidden">
-        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-to-r from-blue-100 to-blue-200 shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-to-r from-black-100 to-black-200 shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -191,7 +191,7 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full !bg-[#0066a4] hover:!bg-[#da222a] text-white font-bold rounded-lg py-3 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
+                  className="w-full !bg-[#000000] hover:!bg-[#da222a] text-white font-bold rounded-lg py-3 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
@@ -215,7 +215,7 @@ export default function ContactPage() {
                       Email:{" "}
                       <a
                         href="mailto:info@jaydeep-industry.com"
-                        className="text-[#0066a4] hover:underline"
+                        className="text-[#000000] hover:underline"
                       >
                         {" "}
                         info@jaydeep-industry.com, akd.jaydeep@gmail.com
@@ -228,7 +228,7 @@ export default function ContactPage() {
                       Phone:{" "}
                       <a
                         href="tel:+919825311311"
-                        className="text-[#0066a4] hover:underline"
+                        className="text-[#000000] hover:underline"
                       >
                         +91 9825311311, +91 2612912700
                       </a>
@@ -237,9 +237,9 @@ export default function ContactPage() {
                   <li className="flex items-start space-x-4">
                     <MapPin className="h-6 w-6 text-[#da222a] flex-shrink-0 mt-1" />
                     <span>
-                      Address: D2/92-95 and E1/96-99, Bhagwati Nagar Industrial
-                      Estate, Near Navjivan Automotive Showroom, Bhestan, Surat
-                      - 395023 (Gujarat) India
+                      Address: Plot no. D2/92-95 & E1/96-99, Bhagwati Nagar
+                      Industrial Estate, Near Navjivan Automobile Showroom,
+                      Bhestan, Surat - 395023 (Gujarat) India
                     </span>
                   </li>
                 </ul>

@@ -85,13 +85,13 @@ export default function GroupClientPage() {
       <PageHeroTitle
         title="Our Group Companies"
         description="Jaydeep Industries is part of a strong network of companies dedicated to excellence in textile manufacturing and weaving accessories."
-        themeColor="blue"
+        themeColor="black"
       />
 
       {/* Company Cards Section */}
       <section className="relative py-12 md:py-20 bg-white overflow-hidden">
-        {/* Decorative Shadow Element (Blue themed) - Increased size and blur */}
-        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-blue-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
+        {/* Decorative Shadow Element (black themed) - Increased size and blur */}
+        <div className="absolute top-1/4 left-0 w-[900px] h-[900px] bg-gradient-black-shadow shadow-2xl blur-3xl rounded-full z-0 -translate-x-1/2"></div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -134,8 +134,8 @@ export default function GroupClientPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="bg-[#0066a4]/50 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Award className="h-8 w-8 text-[#0066a4]" />
+                <div className="bg-[#000000]/50 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Award className="h-8 w-8 text-[#000000]" />
                 </div>
                 <h3 className="text-xl font-semibold text-[#1a1a1a] mb-2">
                   Quality Excellence

@@ -7,7 +7,7 @@ import { PhoneCall, Mail } from "lucide-react";
 
 export default function ContactCta() {
   return (
-    <section className="py-16 md:py-24 bg-[#0066a4] text-white">
+    <section className="py-16 md:py-24 bg-[#000000] text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export default function ContactCta() {
               asChild
               size="lg"
               variant="outline"
-              className="!border-2 !border-white !text-white !bg-transparent !hover:bg-white !hover:text-[#0066a4] !font-bold !rounded-xl !px-8 !py-3 !shadow-lg !hover:shadow-xl !transition-all !duration-300"
+              className="!border-2 !border-white !text-white !bg-transparent !hover:bg-white !hover:text-[#000000] !font-bold !rounded-xl !px-8 !py-3 !shadow-lg !hover:shadow-xl !transition-all !duration-300"
             >
               <Link href="tel:+91XXXXXXXXXX">
                 <PhoneCall className="mr-2 h-5 w-5" />

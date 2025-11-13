@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 interface PageHeroTitleProps {
   title: string;
   description: string;
-  themeColor?: "blue" | "red"; // To apply a tint if needed
+  themeColor?: "black" | "red"; // To apply a tint if needed
 }
 
 interface BreadcrumbItem {
@@ -19,7 +19,7 @@ interface BreadcrumbItem {
 export default function PageHeroTitle({
   title,
   description,
-  themeColor = "blue",
+  themeColor = "black",
 }: PageHeroTitleProps) {
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter(Boolean);
@@ -36,14 +36,14 @@ export default function PageHeroTitle({
   ];
 
   // Use a subtle gradient for the background
-  const sectionBgGradient = "bg-gradient-to-br from-[#e6f2f8] to-[#f8e6e6]"; // Very light blue to very light red
+  const sectionBgGradient = "bg-gradient-to-br from-[#ececec] to-[#f8e6e6]"; // Very light black to very light red
   // Use dark text colors for contrast
   const titleTextColor = "text-gray-900";
   const descriptionTextColor = "text-gray-700";
   const breadcrumbTextColor = "text-gray-800"; // Darker for better visibility on light background
   const breadcrumbActiveColor = "text-gray-900";
   const breadcrumbHoverColor =
-    themeColor === "red" ? "hover:text-[#da222a]" : "hover:text-[#0066a4]";
+    themeColor === "red" ? "hover:text-[#da222a]" : "hover:text-[#000000]";
   const iconColor = "text-gray-600"; // For ChevronRight and Home icons
 
   return (

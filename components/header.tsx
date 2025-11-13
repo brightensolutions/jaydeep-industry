@@ -36,12 +36,12 @@ export default function MainHeader() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`sticky top-0 z-50  ${
           scrolled
-            ? "bg-[#0066a4]/90 backdrop-blur-xl shadow-2xl border-b border-[#0066a4]"
-            : "bg-[#0066a4]/95 backdrop-blur-lg shadow-xl"
+            ? "bg-[#000000]/90 backdrop-blur-xl shadow-2xl border-b border-[#000000]"
+            : "bg-[#000000]/95 backdrop-blur-lg shadow-xl"
         }`}
       >
         {/* Gradient Border */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#da222a] via-[#0066a4] to-[#da222a]"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#da222a] via-[#000000] to-[#da222a]"></div>
 
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-2 lg:py-3">
@@ -116,7 +116,7 @@ export default function MainHeader() {
                 <Button
                   asChild
                   size="sm"
-                  className="bg-white text-[#0066a4] hover:bg-[#da222a] hover:text-white font-bold px-8 lg:px-10 text-sm lg:text-base shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border border-[#0066a4]"
+                  className="bg-white text-[#000000] hover:bg-[#da222a] hover:text-white font-bold px-8 lg:px-10 text-sm lg:text-base shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl border border-[#000000]"
                 >
                   <Link href="/contact">Contact</Link>
                 </Button>
@@ -168,7 +168,7 @@ export default function MainHeader() {
                 animate={{ height: "auto", opacity: 1, y: 0 }}
                 exit={{ height: 0, opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="md:hidden border-t border-gray-100 overflow-hidden bg-gradient-to-br from-[#0066a4]/90 via-[#da222a]/30 to-[#1a1a1a]/30 backdrop-blur-xl"
+                className="md:hidden border-t border-gray-100 overflow-hidden bg-gradient-to-br from-[#000000]/90 via-[#da222a]/30 to-[#1a1a1a]/30 backdrop-blur-xl"
               >
                 <div className="space-y-2 pb-6 pt-6">
                   {/* Mobile Contact Info with Premium Design */}
@@ -176,7 +176,7 @@ export default function MainHeader() {
                     initial={{ x: -50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.1 }}
-                    className="px-4 py-4 bg-[#0066a4]/20 mx-4 rounded-2xl mb-6 shadow-lg border border-white/50" // Simplified background
+                    className="px-4 py-4 bg-[#000000]/20 mx-4 rounded-2xl mb-6 shadow-lg border border-white/50" // Simplified background
                   >
                     <div className="flex items-center space-x-3 text-sm text-white mb-3">
                       <div className="p-2 bg-[#da222a]/20 rounded-full">
@@ -185,16 +185,16 @@ export default function MainHeader() {
                       <span className="font-bold">+91 9825311311</span>
                     </div>
                     <div className="flex items-center space-x-3 text-sm text-white mb-3">
-                      <div className="p-2 bg-[#0066a4]/20 rounded-full">
-                        <Mail className="h-4 w-4 text-[#0066a4]" />
+                      <div className="p-2 bg-[#000000]/20 rounded-full">
+                        <Mail className="h-4 w-4 text-[#000000]" />
                       </div>
                       <span className="font-bold">
                         info@jaydeep-industry.com, akd.jaydeep@gmail.com
                       </span>
                     </div>
                     <div className="flex items-center space-x-3 text-sm text-white mb-3">
-                      <div className="p-2 bg-[#0066a4]/20 rounded-full">
-                        <Map className="h-4 w-4 text-[#0066a4]" />
+                      <div className="p-2 bg-[#000000]/20 rounded-full">
+                        <Map className="h-4 w-4 text-[#000000]" />
                       </div>
                       <span className="font-bold">
                         D2/92-95, E1/96-99, Bhagwati Nagar Industrial Estate,
@@ -237,7 +237,7 @@ export default function MainHeader() {
                       <Link
                         href="/contact"
                         onClick={() => setMobileMenuOpen(false)}
-                        className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-[#0066a4] text-white font-bold text-base px-8 py-3 shadow-lg hover:bg-[#da222a] hover:shadow-xl transition-all duration-300 text-center"
+                        className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-[#000000] text-white font-bold text-base px-8 py-3 shadow-lg hover:bg-[#da222a] hover:shadow-xl transition-all duration-300 text-center"
                       >
                         Contact Us
                       </Link>

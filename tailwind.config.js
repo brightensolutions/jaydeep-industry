@@ -28,7 +28,7 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
           red: "#da222a", // Custom primary red
-          blue: "#1975ad", // Custom primary blue
+          black: "#000000", // Custom primary black
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -81,8 +81,8 @@ const config = {
         "move-dots": "move-dots 10s linear infinite", // Apply animation
       },
       backgroundImage: {
-        "gradient-blue-shadow":
-          "radial-gradient(circle, rgba(37,99,235,0.3) 0%, rgba(37,99,235,0) 70%)", // Blue with 30% opacity
+        "gradient-black-shadow":
+          "radial-gradient(circle, rgba(37,99,235,0.3) 0%, rgba(37,99,235,0) 70%)", // black with 30% opacity
         "gradient-red-shadow":
           "radial-gradient(circle, rgba(218,34,42,0.3) 0%, rgba(218,34,42,0) 70%)", // Red with 30% opacity
         "dotted-pattern":

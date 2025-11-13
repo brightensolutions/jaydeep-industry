@@ -29,7 +29,7 @@ const achievements = [
 export default function AchievementsSection() {
   return (
     <section className="relative py-24 md:py-32 bg-white overflow-hidden">
-      <div className="absolute top-1/4 right-0 w-[700px] h-[700px] bg-gradient-blue-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div>
+      {/* <div className="absolute top-1/4 right-0 w-[700px] h-[700px] bg-gradient-black-shadow shadow-2xl blur-2xl rounded-full z-0 translate-x-1/2"></div> */}
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -59,15 +59,15 @@ export default function AchievementsSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.15 }}
               >
-                <Card className="h-full p-8 lg:p-10 shadow-lg hover:shadow-2xl border-t-4 border-primary-blue transition-all duration-300 bg-white group">
+                <Card className="h-full p-8 lg:p-10 shadow-lg hover:shadow-2xl border-t-4 border-primary-black transition-all duration-300 bg-white group">
                   <CardContent className="p-0">
                     {/* Number badge and icon */}
                     <div className="flex items-start justify-between mb-6">
-                      <span className="text-4xl font-bold text-primary-blue">
+                      <span className="text-4xl font-bold text-primary-black">
                         {item.number}
                       </span>
-                      <div className="p-3 rounded-xl bg-primary-blue/10 group-hover:bg-primary-blue/20 transition-all duration-300">
-                        <Icon className="w-6 h-6 text-primary-blue" />
+                      <div className="p-3 rounded-xl bg-primary-black/10 group-hover:bg-primary-black/20 transition-all duration-300">
+                        <Icon className="w-6 h-6 text-primary-black" />
                       </div>
                     </div>
 

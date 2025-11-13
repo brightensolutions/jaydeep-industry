@@ -33,9 +33,9 @@ interface TimelineItemProps extends React.HTMLAttributes<HTMLLIElement> {
 const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>(
   ({ className, index, year, children, ...props }, ref) => {
     // Alternate colors for the dot and the year/title text
-    const dotColor = index % 2 === 0 ? "bg-primary-blue" : "bg-primary-red";
+    const dotColor = index % 2 === 0 ? "bg-primary-black" : "bg-primary-red";
     const textColor =
-      index % 2 === 0 ? "text-primary-blue" : "text-primary-red";
+      index % 2 === 0 ? "text-primary-black" : "text-primary-red";
 
     return (
       <li
