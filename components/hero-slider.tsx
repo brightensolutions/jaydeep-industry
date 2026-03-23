@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-
 const sliderImages = [
   {
     src: "/w-main-image.jpeg",
@@ -17,7 +16,7 @@ const sliderImages = [
     src: "/slider2.jpeg",
     alt: "Slide 2",
     type: "anniversary",
-  }
+  },
 ];
 
 export default function HeroSection() {
@@ -37,13 +36,15 @@ export default function HeroSection() {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + sliderImages.length) % sliderImages.length
+    );
   };
 
   return (
     <section className="relative w-full min-h-screen bg-black overflow-hidden font-sans flex flex-col">
 
-      {/* ✅ BACKGROUND SLIDER (FIXED) */}
+      {/* BACKGROUND SLIDER */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
           <motion.div
@@ -70,10 +71,16 @@ export default function HeroSection() {
 
       {/* SLIDER CONTROLS */}
       <div className="absolute bottom-8 right-8 z-20 flex gap-2">
-        <button onClick={prevImage} className="bg-black/40 hover:bg-[#da222a] text-white p-3 rounded-full border border-white/20">
+        <button
+          onClick={prevImage}
+          className="bg-black/40 hover:bg-[#da222a] text-white p-3 rounded-full border border-white/20"
+        >
           <ChevronLeft size={20} />
         </button>
-        <button onClick={nextImage} className="bg-black/40 hover:bg-[#da222a] text-white p-3 rounded-full border border-white/20">
+        <button
+          onClick={nextImage}
+          className="bg-black/40 hover:bg-[#da222a] text-white p-3 rounded-full border border-white/20"
+        >
           <ChevronRight size={20} />
         </button>
       </div>
@@ -85,7 +92,9 @@ export default function HeroSection() {
             key={index}
             onClick={() => setCurrentImageIndex(index)}
             className={`h-1.5 rounded-full ${
-              index === currentImageIndex ? "w-8 bg-[#da222a]" : "w-4 bg-white/50"
+              index === currentImageIndex
+                ? "w-8 bg-[#da222a]"
+                : "w-4 bg-white/50"
             }`}
           />
         ))}
@@ -104,56 +113,70 @@ export default function HeroSection() {
           </span>
         </motion.div>
 
-        {/* ✅ DYNAMIC CONTENT */}
+        {/* CONTENT */}
         <div className="flex-grow flex items-end md:items-center justify-start pb-12 md:pb-0 py-4">
 
           {sliderImages[currentImageIndex].type === "default" ? (
 
-            <motion.h1
-              key="default"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              style={{ fontSize: "clamp(2.5rem, 10vw, 6.5rem)" }}
-              className="font-black text-white uppercase"
-            >
-              Precision{" "}
-              <span className="text-[#da222a]">Twin Healds</span>
-              <br />
-              <span className="text-white/90">for Superior Weaving</span>
-            </motion.h1>
+            <div className="max-w-[90%] md:max-w-4xl">
+              <motion.h1
+                key="default"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="
+                  font-black text-white uppercase leading-tight break-words
+                  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+                "
+              >
+                Precision{" "}
+                <span className="text-[#da222a]">Twin Healds</span>
+                <br />
+                <span className="text-white/90">
+                  for Superior Weaving
+                </span>
+              </motion.h1>
+            </div>
 
           ) : (
 
-<div className="max-w-6xl mx-auto px-4 text-center">
-  <motion.div
-    initial={{ y: 20, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ delay: 0.2 }}
-  >
-    <h1 className="text-[#e6c27a] text-5xl md:text-8xl font-black uppercase tracking-tighter drop-shadow-2xl">
-      50 YEARS
-    </h1>
-    <div className="flex items-center justify-center gap-4 my-2">
-      <div className="h-[1px] w-20 bg-[#e6c27a]" />
-      <span className="text-white text-2xl font-light tracking-[0.5em]">OF PRECISION</span>
-      <div className="h-[1px] w-20 bg-[#e6c27a]" />
-    </div>
-    
-    <p className="text-white/70 text-lg mt-8 max-w-lg mx-auto leading-relaxed">
-      A legacy built on excellence. Join us as we reflect on five decades of industrial mastery.
-    </p>
+            <div className="max-w-6xl mx-auto px-4 text-center">
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                <h1 className="text-[#e6c27a] text-5xl md:text-8xl font-black uppercase tracking-tighter drop-shadow-2xl">
+                  50 YEARS
+                </h1>
 
-    <button
-      onClick={() => router.push("/about")}
-      className="mt-10 group relative inline-flex items-center gap-3 text-white transition-all"
-    >
-      <span className="text-sm uppercase tracking-[0.3em] font-bold">The Face Of Jaydeep</span>
-      <div className="h-10 w-10 rounded-full border border-[#e6c27a] flex items-center justify-center group-hover:bg-[#e6c27a] transition-all">
-        <span className="text-[#e6c27a] group-hover:text-black">→</span>
-      </div>
-    </button>
-  </motion.div>
-</div>
+                <div className="flex items-center justify-center gap-4 my-2">
+                  <div className="h-[1px] w-20 bg-[#e6c27a]" />
+                  <span className="text-white text-2xl font-light tracking-[0.5em]">
+                    OF PRECISION
+                  </span>
+                  <div className="h-[1px] w-20 bg-[#e6c27a]" />
+                </div>
+
+                <p className="text-white/70 text-lg mt-8 max-w-lg mx-auto leading-relaxed">
+                  A legacy built on excellence. Join us as we reflect on five
+                  decades of industrial mastery.
+                </p>
+
+                <button
+                  onClick={() => router.push("/about")}
+                  className="mt-10 group relative inline-flex items-center gap-3 text-white transition-all"
+                >
+                  <span className="text-sm uppercase tracking-[0.3em] font-bold">
+                    The Face Of Jaydeep
+                  </span>
+                  <div className="h-10 w-10 rounded-full border border-[#e6c27a] flex items-center justify-center group-hover:bg-[#e6c27a] transition-all">
+                    <span className="text-[#e6c27a] group-hover:text-black">
+                      →
+                    </span>
+                  </div>
+                </button>
+              </motion.div>
+            </div>
 
           )}
 
