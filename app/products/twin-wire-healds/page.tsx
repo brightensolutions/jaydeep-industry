@@ -215,7 +215,7 @@ export default function TwinWireHealdsPage() {
       src="/mail-eyes.png"  // 👈 change this
       alt="Twin Wire Healds"
       fill
-      className="object-cover"
+      className="object-contain"
     />
   </div>
 </div>
