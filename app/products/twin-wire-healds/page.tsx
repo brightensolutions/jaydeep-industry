@@ -209,15 +209,15 @@ export default function TwinWireHealdsPage() {
             </div>
           </div>
 {/* 04: BOTTOM IMAGE */}
+{/* 04: BOTTOM IMAGE */}
 <div className="mt-12 lg:mt-20">
-  <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] border border-gray-200 overflow-hidden">
-    <Image
-      src="/mail-eyes.png"  // 👈 change this
-      alt="Twin Wire Healds"
-      fill
-      className="object-contain"
-    />
-  </div>
+  <Image
+    src="/mail-eyes.png"
+    alt="Twin Wire Healds"
+    width={1200}
+    height={600}
+    className="h-auto w-full max-w-5xl object-contain"
+  />
 </div>
         </div>
       </section>
