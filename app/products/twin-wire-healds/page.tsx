@@ -44,7 +44,7 @@ export default function TwinWireHealdsPage() {
       data: [
         { no: "2810 R", thickness: "0.4", inner: "2.8 x 1.2", image: "/2810.jpg" },
         { no: "3012 R", thickness: "0.4 / 0.45", inner: "3.0 x 1.2", image: "/3012.jpg" },
-        { no: "314 R", thickness: "0.4", inner: "3.2 x 1.4", image: "/314.jpg" },
+        { no: "3214 R", thickness: "0.4", inner: "3.2 x 1.4", image: "/314.jpg" },
         { no: "3815 R", thickness: "0.4", inner: "3.8 x 1.5", image: "/3815.jpg" },
         { no: "6740 R", thickness: "1.4", inner: "6.7 x 4.0", image: "/6740.jpg" },
         { no: "8142 R", thickness: "1.4", inner: "8.1 x 4.2", image: "/8142.jpg" },
