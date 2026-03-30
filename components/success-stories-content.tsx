@@ -28,7 +28,7 @@ const eepcAwards: AwardItem[] = [
 ];
 
 const dgftAwards: AwardItem[] = [
-  { year: "Present", title: "One Star Export House", image: "/dgft.jpeg", auth: "DGFT" },
+  { year: "Present", title: "One Star Export House", image: "/one-star-export-house.png", auth: "DGFT" },
 ];
 
 export default function SuccessStoriesContent() {
