@@ -93,7 +93,7 @@ export default function TwinWireHealdsPage() {
   return (
     <div className="font-heading bg-white min-h-screen">
       <PageHeroTitle
-        title="Twin Inserted Twisted Wire Healds"
+        title="Twisted Twin Wire Healds"
         description="High-performance weaving accessories manufactured to absolute international standards."
         themeColor="red"
       />
