@@ -173,9 +173,9 @@ export default function TwinWireHealdsPage() {
             <div className="grid lg:grid-cols-2 gap-x-12 gap-y-16 items-start">
               {mailEyesGroups.map((group, gi) => (
                 <div key={gi} className="space-y-4">
-                  <h4 className="text-sm font-black uppercase text-gray-400 tracking-[0.3em] flex items-center gap-3">
+                  {/* <h4 className="text-sm font-black uppercase text-gray-400 tracking-[0.3em] flex items-center gap-3">
                     <div className="w-6 h-[2px] bg-gray-200" /> {group.title}
-                  </h4>
+                  </h4> */}
                   <div className="border border-gray-200 bg-white shadow-md overflow-hidden rounded-sm">
                     <Table>
                       <TableHeader className="bg-gray-50 h-12">
