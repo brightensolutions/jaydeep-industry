@@ -146,7 +146,7 @@ export default function MainHeader() {
         </nav>
       </motion.header>
 
-      {/* MOBILE MENU (Unchanged as per your request) */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -177,6 +177,7 @@ export default function MainHeader() {
                 >
                   <Link
                     href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-6 py-6 border-b border-white/5 group active:bg-white/5 transition-colors"
                   >
                     <item.icon className="text-[#da222a] shrink-0" size={26} />
@@ -187,7 +188,8 @@ export default function MainHeader() {
                 </motion.div>
               ))}
             </nav>
-            {/* Language grid remains same... */}
+            
+            {/* Language grid or extra footer items can stay here */}
           </motion.div>
         )}
       </AnimatePresence>
