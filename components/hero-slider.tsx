@@ -167,7 +167,7 @@ export default function HeroSection() {
                   className="mt-10 group relative inline-flex items-center gap-3 text-white transition-all"
                 >
                   <span className="text-sm uppercase tracking-[0.3em] font-bold">
-                    The Face Of Jaydeep
+                    THE PHASES OF JAYDEEP
                   </span>
                   <div className="h-10 w-10 rounded-full border border-[#e6c27a] flex items-center justify-center group-hover:bg-[#e6c27a] transition-all">
                     <span className="text-[#e6c27a] group-hover:text-black">
