@@ -42,7 +42,8 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-black overflow-hidden font-sans flex flex-col">
+    // Reduced height on mobile (h-[80vh]) vs desktop (min-h-screen)
+    <section className="relative w-full h-[80vh] md:min-h-screen bg-black overflow-hidden font-sans flex flex-col">
 
       {/* BACKGROUND SLIDER */}
       <div className="absolute inset-0 z-0">
@@ -102,23 +103,23 @@ export default function HeroSection() {
 
       <div className="relative z-10 flex-grow w-full flex flex-col px-4 sm:px-6 md:px-12 py-4 md:py-10">
 
-        {/* RELIABILITY BADGE */}
+        {/* RELIABILITY BADGE - Centered on mobile via self-center */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          className="relative md:absolute md:top-40 mt-16 sm:mt-24 md:mt-0 self-start flex items-center gap-2 md:gap-4 bg-black/40 px-3 py-2 md:px-5 md:py-2.5 border-l-2 md:border-l-4 border-[#da222a]"
+          className="relative md:absolute md:top-40 mt-16 sm:mt-24 md:mt-0 self-center md:self-start flex items-center gap-2 md:gap-4 bg-black/40 px-3 py-2 md:px-5 md:py-2.5 border-l-2 md:border-l-4 border-[#da222a]"
         >
           <span className="text-white text-[8px] sm:text-[10px] md:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em]">
             Reliability • Quality • After-Sales Service
           </span>
         </motion.div>
 
-        {/* CONTENT */}
-        <div className="flex-grow flex items-end md:items-center justify-start pb-20 md:pb-0 py-4">
+        {/* CONTENT - Vertical/Horizontal centering on mobile (items-center justify-center) */}
+        <div className="flex-grow flex items-center justify-center md:items-center md:justify-start pb-10 md:pb-0 py-4">
 
           {sliderImages[currentImageIndex].type === "default" ? (
 
-            <div className="w-full max-w-[95%] md:max-w-4xl">
+            <div className="w-full max-w-[95%] md:max-w-4xl text-center md:text-left">
               <motion.h1
                 key="default"
                 initial={{ opacity: 0, y: 30 }}
