@@ -30,6 +30,12 @@ const languages = [
   { code: "zh-CN", label: "中文" },
   { code: "ja", label: "日本語" },
   { code: "ko", label: "한국어" },
+
+  // ✅ Added languages
+  { code: "gu", label: "ગુજરાતી" },
+  { code: "hi", label: "हिन्दी" },
+  { code: "ar", label: "العربية" },
+  { code: "ru", label: "Русский" },
 ];
 
 export default function MainHeader() {
@@ -41,8 +47,7 @@ export default function MainHeader() {
   const isHomePage = pathname === "/";
   const shouldBeSolid = !isHomePage || scrolled;
 
-  // Logic to split the menu items around the center logo
-  const leftNav = detailedNavigation.slice(0, 2); 
+  const leftNav = detailedNavigation.slice(0, 2);
   const rightNav = detailedNavigation.slice(2);
 
   useEffect(() => {
@@ -53,17 +58,26 @@ export default function MainHeader() {
 
   const changeLanguage = (lang: string) => {
     setCurrentLang(lang);
-    setTimeout(() => {
-      const select = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
+
+    const tryChange = () => {
+      const select = document.querySelector(
+        ".goog-te-combo"
+      ) as HTMLSelectElement | null;
+
       if (select) {
         select.value = lang;
         select.dispatchEvent(new Event("change"));
+      } else {
+        setTimeout(tryChange, 300);
       }
-    }, 300);
+    };
+
+    setTimeout(tryChange, 300);
   };
 
   return (
     <>
+      {/* Google Translate */}
       <div id="google_translate_element" className="hidden" />
 
       <motion.header
@@ -71,12 +85,14 @@ export default function MainHeader() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          shouldBeSolid ? "bg-black/95 backdrop-blur-lg shadow-2xl" : "bg-transparent"
+          shouldBeSolid
+            ? "bg-black/95 backdrop-blur-lg shadow-2xl"
+            : "bg-transparent"
         }`}
       >
         <nav className="mx-auto max-w-[1800px] px-6 lg:px-12 flex justify-between items-center h-24 md:h-28">
           
-          {/* LEFT SECTION: Main Logo */}
+          {/* LEFT LOGO */}
           <div className="flex items-center gap-2 md:gap-4 flex-1">
             <Link href="/" className="flex-shrink-0">
               <Image
@@ -90,32 +106,42 @@ export default function MainHeader() {
             </Link>
           </div>
 
-          {/* CENTER SECTION: Split Nav + Anniversary */}
+          {/* CENTER NAV */}
           <div className="hidden lg:flex items-center justify-center gap-2 xl:gap-6 flex-[2]">
-            {/* Left Nav Items */}
             {leftNav.map((item) => (
-              <Link key={item.label} href={item.href} className="relative px-4 py-3 text-white font-black uppercase tracking-tighter text-sm xl:text-base group">
+              <Link
+                key={item.label}
+                href={item.href}
+                className="relative px-4 py-3 text-white font-black uppercase tracking-tighter text-sm xl:text-base group"
+              >
                 <span className="relative z-10">{item.label}</span>
                 <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-[#da222a] group-hover:w-8 transition-all duration-300 rounded-full" />
               </Link>
             ))}
 
-            {/* THE 50TH ANNIVERSARY DESIGN */}
+            {/* ANNIVERSARY */}
             <div className="flex flex-col items-center px-6 border-x border-white/10">
-               <span className="text-[#e6c27a] text-3xl xl:text-4xl font-serif leading-none">50<span className="text-[10px] uppercase align-top">th</span></span>
-               <span className="text-[#e6c27a] text-[10px] uppercase tracking-[0.3em] font-bold -mt-1">Anniversary</span>
+              <span className="text-[#e6c27a] text-3xl xl:text-4xl font-serif leading-none">
+                50<span className="text-[10px] uppercase align-top">th</span>
+              </span>
+              <span className="text-[#e6c27a] text-[10px] uppercase tracking-[0.3em] font-bold -mt-1">
+                Anniversary
+              </span>
             </div>
 
-            {/* Right Nav Items */}
             {rightNav.map((item) => (
-              <Link key={item.label} href={item.href} className="relative px-4 py-3 text-white font-black uppercase tracking-tighter text-sm xl:text-base group">
+              <Link
+                key={item.label}
+                href={item.href}
+                className="relative px-4 py-3 text-white font-black uppercase tracking-tighter text-sm xl:text-base group"
+              >
                 <span className="relative z-10">{item.label}</span>
                 <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-[#da222a] group-hover:w-8 transition-all duration-300 rounded-full" />
               </Link>
             ))}
           </div>
 
-          {/* RIGHT SECTION: Brand Logo & Lang Selector */}
+          {/* RIGHT SIDE */}
           <div className="flex items-center justify-end gap-4 flex-1">
             <Image
               src="/swastik-logo-removebg-preview1.png"
@@ -132,7 +158,9 @@ export default function MainHeader() {
               className="hidden md:block bg-black border border-white/30 text-white text-xs px-2 py-1 rounded cursor-pointer notranslate"
             >
               {languages.map((lang) => (
-                <option key={lang.code} value={lang.code}>{lang.label}</option>
+                <option key={lang.code} value={lang.code}>
+                  {lang.label}
+                </option>
               ))}
             </select>
 
@@ -161,7 +189,7 @@ export default function MainHeader() {
               </span>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white bg-white/10 p-3 rounded-full active:scale-90 transition-transform"
+                className="text-white bg-white/10 p-3 rounded-full"
               >
                 <X size={28} />
               </button>
@@ -178,18 +206,16 @@ export default function MainHeader() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-6 py-6 border-b border-white/5 group active:bg-white/5 transition-colors"
+                    className="flex items-center gap-6 py-6 border-b border-white/5 group"
                   >
-                    <item.icon className="text-[#da222a] shrink-0" size={26} />
-                    <span className="text-3xl font-black text-white uppercase tracking-tighter italic leading-none">
+                    <item.icon className="text-[#da222a]" size={26} />
+                    <span className="text-3xl font-black text-white uppercase">
                       {item.label}
                     </span>
                   </Link>
                 </motion.div>
               ))}
             </nav>
-            
-            {/* Language grid or extra footer items can stay here */}
           </motion.div>
         )}
       </AnimatePresence>

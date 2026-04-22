@@ -10,7 +10,7 @@ export default function GoogleTranslate() {
       new (window as any).google.translate.TranslateElement(
         {
           pageLanguage: "en",
-          includedLanguages: "en,de,it,zh-CN,ja,ko",
+          includedLanguages: "en,de,it,zh-CN,ja,ko,gu,hi,ar,ru",
           autoDisplay: false,
         },
         "google_translate_element"
@@ -28,7 +28,7 @@ export default function GoogleTranslate() {
   return (
     <div
       id="google_translate_element"
-      className="hidden" // hide the default ugly widget
+      className="hidden"
     />
   );
 }
